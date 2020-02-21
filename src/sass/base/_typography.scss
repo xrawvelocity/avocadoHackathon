@@ -11,14 +11,17 @@ body {
     text-transform: uppercase;
     backface-visibility: hidden;
     margin-bottom: 8rem;
+    animation: moveInTop 5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    animation-fill-mode: forwards;
 
     &--main {
         display: block;
         font-size: 6rem;
         font-weight: 400;
-        letter-spacing: 3rem;
+        letter-spacing: 2rem;
         padding-left: 1rem;
-        animation: moveInLeft 2s ease-out;
+        animation: moveInTop 5s cubic-bezier(0.165, 0.84, 0.44, 1);
+        animation-fill-mode: forwards;
 
         @include respond(phone){
             letter-spacing: 1rem;
@@ -27,15 +30,39 @@ body {
     }
     &--sub {
         display: block;
-        font-size: 2rem;
-        font-weight: 700;
-        letter-spacing: 1.75rem;
-        animation: moveInRight 2s ease-out;
+        font-size: 4rem;
+        font-weight: 400;
+        letter-spacing: 1rem;
+        animation: moveInTop 5s cubic-bezier(0.165, 0.84, 0.44, 1);
+        animation-fill-mode: forwards; 
 
         @include respond(phone){
             letter-spacing: .5rem;
         }
     }
+
+    &-about{
+
+        color: $color-white;
+        text-transform: uppercase;
+        backface-visibility: hidden;
+        margin-bottom: 8rem;
+        animation: fadeIn 5s cubic-bezier(0.165, 0.84, 0.44, 1);
+        animation-fill-mode: forwards;
+
+        &--about {
+            display: block;
+            font-size: 3rem;
+            font-weight: 400;
+            margin-top: 7rem;
+            letter-spacing: 1rem;
+            
+            @include respond(phone){
+                letter-spacing: .5rem;
+            }
+        }
+    }
+    
 }
 
 .heading-secondary{

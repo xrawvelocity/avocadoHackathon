@@ -1,10 +1,15 @@
 .navigation {
+    & > *:not(:last-child) {
+        animation: fadeIn 10s cubic-bezier(0.165, 0.84, 0.44, 1);
+    animation-fill-mode: forwards;
+    }
+
     &__checkbox {
         display: none;
     }
 
     &__button {
-        background-color: $color-white;
+        background-color: $color-primary-1;
         height: 7rem;
         width: 7rem;
         position: fixed;
@@ -15,6 +20,7 @@
         box-shadow: 0 1rem 3rem rgba($color-black, .1);
         text-align: center;
         cursor: pointer;
+        
 
         @include respond(tab-port){
             top: 4rem;
@@ -29,7 +35,7 @@
         position: fixed;
         top: 6.5rem;
         right: 6.5rem;
-        background-image: radial-gradient($color-primary-light, $color-primary-dark);
+        background-image: radial-gradient($color-navy-1, $color-navy-2);
         z-index: 1000;
         transition: all .7s cubic-bezier(0.86, 0, 0.07, 1);
 
@@ -69,21 +75,21 @@
             font-size: 3rem;
             padding: 1rem 2rem;
             font-weight: 300;
-            color: $color-white;
+            color: $color-primary-1;
             text-decoration: none;
             text-transform: uppercase;
-            background-image: linear-gradient(120deg, transparent 0%, transparent 50%, $color-white 50%);
+            background-image: linear-gradient(120deg, transparent 0%, transparent 50%, $color-primary-1 50%);
             background-size: 225%;
             transition: all .4s;
 
             @include respond(phone){
-                background-image: linear-gradient(120deg, transparent 0%, transparent 60%, $color-white 60%);
+                background-image: linear-gradient(120deg, transparent 0%, transparent 60%, $color-primary-1 60%);
             }
         }
         &:hover,
         &:active {
             background-position: 100%;
-            color: $color-primary;
+            color: $color-navy-1;
             transform: translateX(1rem);
 
             @include respond(phone){

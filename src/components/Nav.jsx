@@ -7,7 +7,7 @@ export default class Nav extends Component {
         <div className="navigation">
             <input type="checkbox" className="navigation__checkbox" id="navi-toggle"/>
 
-            <label for="navi-toggle" className="navigation__button">
+            <label htmlFor="navi-toggle" className="navigation__button">
                 <span className="navigation__icon">&nbsp;</span>
             </label>
 
@@ -15,11 +15,11 @@ export default class Nav extends Component {
 
             <nav className="navigation__nav">
                 <ul className="navigation__list">
-                    <li className="navigation__item"><a href="#" className="navigation__link">About Natours</a></li>
-                    <li className="navigation__item"><a href="#" className="navigation__link">Your benefits</a></li>
-                    <li className="navigation__item"><a href="#" className="navigation__link">Popular tours</a></li>
-                    <li className="navigation__item"><a href="#" className="navigation__link">Stories</a></li>
-                    <li className="navigation__item"><a href="#" className="navigation__link">Book now</a></li>
+                    <li className="navigation__item"><a href="#" className="navigation__link">Profile</a></li>
+                    <li className="navigation__item"><a href="#" className="navigation__link">Youtube</a></li>
+                    <li className="navigation__item"><a href="#" className="navigation__link">Amazon</a></li>
+                    <li className="navigation__item"><a href="#" className="navigation__link">Podcasts</a></li>
+                    <li className="navigation__item"><a href="#" className="navigation__link">Contact</a></li>
                 </ul>
             </nav>
         </div>
