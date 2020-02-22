@@ -15,11 +15,11 @@ export default class Nav extends Component {
 
             <nav className="navigation__nav">
                 <ul className="navigation__list">
-                    <li className="navigation__item"><a href="#" className="navigation__link">Profile</a></li>
-                    <li className="navigation__item"><a href="#" className="navigation__link">Youtube</a></li>
-                    <li className="navigation__item"><a href="#" className="navigation__link">Amazon</a></li>
-                    <li className="navigation__item"><a href="#" className="navigation__link">Podcasts</a></li>
-                    <li className="navigation__item"><a href="#" className="navigation__link">Contact</a></li>
+                    <li className="navigation__item">Profile</li>
+                    <li className="navigation__item">Youtube</li>
+                    <li className="navigation__item">Amazon</li>
+                    <li className="navigation__item">Podcasts</li>
+                    <li className="navigation__item">Contact</li>
                 </ul>
             </nav>
         </div>

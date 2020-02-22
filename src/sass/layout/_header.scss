@@ -1,19 +1,13 @@
 .header {
-    height: 100vh;
-    background-image: linear-gradient(
-        to right bottom,
-        rgba($color-black-1, 0.7),
-        rgba($color-black,0.7));
-    background-size: cover;
-    background-position: top;
     
     &__logo-box {
         position: relative;
-        padding-top: 4em;
+        padding-top: 4rem;
         padding-left: 6rem;
     }
     &__logo {
         background-image: url(./logo/sanspicTextNoBG.svg);
+        // background-image: url(./logo/liveStyleLogoText.png);
         background-repeat: no-repeat;
         background-size: contain;
         height: 12rem;

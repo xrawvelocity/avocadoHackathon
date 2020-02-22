@@ -6,37 +6,22 @@
         text-decoration: none;
         padding: 1.5rem 4rem;
         display: inline-block;
-        // margin-top: 6rem;
         border-radius: 10rem;
         font-size: $default-font-size;
         transition: all .1s;
-        position: relative;
-
-        
+        position: relative;        
     }
+
     &:hover {
         transform: translateY(-0.3rem);
         box-shadow: 0 1rem 2rem rgba($color-black,.2);
     }
+
     &:active,
     &:focus {
         outline: none;
         transform: translateY(-0.1rem);
         box-shadow: 0 0.5rem 1rem rgba($color-black,.2);
-    }
-    &--white {
-        background-color: $color-white;
-        color: $color-gray-dark;
-    }
-
-    &--green {
-        background-image: linear-gradient(to right bottom, rgba($color-primary-light, .85), rgba($color-primary-dark, .85));;
-        color: $color-white;
-    }
-
-    &--animated {
-        animation: moveInBottom 1s ease-out .75s;
-        animation-fill-mode: backwards;
     }
 }
 
@@ -68,9 +53,11 @@
 .btn-home {
 
     &__log-in,
-    &__sign-up{
+    &__sign-up {
+
         margin:2rem;
         border: none;
+
         &,
         &:link,
         &:visited {
@@ -78,44 +65,22 @@
             text-decoration: none;
             padding: 1.5rem 4rem;
             display: inline-block;
-            // margin-top: 6rem;
             border-radius: 10rem;
             font-size: $default-font-size;
             transition: all .1s;
             position: relative;
-
-            
+            color: $color-navy-1;
         }
+
         &:hover {
             transform: translateY(-0.3rem);
             box-shadow: 0 1rem 2rem rgba($color-black,.2);
+            background-color: $color-primary-1;
         }
+
         &:active,
         &:focus {
             outline: none;
-            transform: translateY(-0.1rem);
-            box-shadow: 0 0.5rem 1rem rgba($color-black,.2);
-        }
-        
-        &:link,
-        &:visited {
-            color: $color-primary-1;
-            display: inline-block;
-            text-decoration: none;
-            border-bottom: 1px solid $color-primary;
-            padding: 4px;
-            font-size: $default-font-size;
-            transition: all .2s;
-        }
-
-        &:hover {
-            background-color: $color-primary-1;
-            transform: translateY(-3px);
-            color: $color-black;
-            box-shadow: 0 1rem 2rem rgba($color-black,.2);
-        }
-
-        &:active {
             transform: translateY(-0.1rem);
             box-shadow: 0 0.5rem 1rem rgba($color-black,.2);
         }

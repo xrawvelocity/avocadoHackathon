@@ -1,6 +1,16 @@
 .form {
-    &__group {
-        margin-bottom: 2rem;
+
+    padding: 18rem 10rem;
+
+    &--form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        & > * {
+            margin: 2rem 0;
+        }
     }
 
     &__input {
@@ -9,9 +19,9 @@
         color: inherit;
         padding: 1.5rem 2rem;
         border-radius: 2px;
-        background-color: rgba($color-white, .5);
+        background-color: $color-gray-light-2;
         border-bottom: 3px solid transparent;
-        width: 90%;
+        width: 50%;
         display: block;
         transition: all .3s;
 
@@ -22,7 +32,7 @@
         &:focus {
             outline: none;
             box-shadow: 0 1rem 2rem rgba($color-black, .1);
-            border-bottom: 3px solid $color-primary;
+            border-bottom: 3px solid $color-primary-1;
         }
 
         &:focus:invalid {

@@ -1,6 +1,6 @@
 .footer {
     background-color: $color-gray-dark-3;
-    padding: 10rem 0;
+    padding: 5rem 0;
     font-size: 1.4rem;
     color: $color-gray-light-1;
 
@@ -11,7 +11,7 @@
 
     &__logo-box {
         text-align: center;
-        margin-bottom: 8rem;
+        margin-bottom: 4rem;
 
         @include respond(tab-port){
             margin-bottom: 6rem;
@@ -19,7 +19,7 @@
     }
 
     &__logo {
-        width: 15rem;
+        width: 10rem;
         height: auto;
     }
 
@@ -57,7 +57,7 @@
 
         &:hover,
         &:active {
-            color: $color-primary;
+            color: $color-primary-1;
             text-shadow: 0rem .5rem .4rem $color-black;
             transform: translateY(-.2rem);
         }
@@ -67,7 +67,7 @@
         border-top: 1px solid $color-gray-dark;
         padding-top: 2rem;
         width: 85%;
-        float: right;
+        margin: 0 auto;
 
         @include respond(tab-port){
             width: 100%;
