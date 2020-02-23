@@ -37,11 +37,8 @@ class App extends Component {
           <div className="header__logo"></div>
       </div>
       <Switch>
-        {/* <Route exact path="/login" render={(props) => <LogIn {...props} />}></Route>
 
-        <Route exact path="/signup" render={(props) => <SignUp {...props} />}></Route> */}
-
-        <Route exact path="/profile" render={(props) => <Profile {...props} />}></Route>
+        <Route exact path="/profile" render={(props) => <Profile {...props} links={this.state.links} ready={this.state.ready} />}></Route>
 
         <Route exact path="/home" render={(props) => <Home {...props} links={this.state.links} ready={this.state.ready} />}></Route>
 

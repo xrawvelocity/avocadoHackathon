@@ -1,9 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import BGvid from './BGvid';
 
-export default function Profile () {
+export default function Profile (props) {
 
+    console.log(props)
+    
     const [inputText, setInputText] = useState("");
-    const [items, setItems] = useState([]);
+    const [items, setItems] = useState(localStorage.getItem('key').split(','));
   
     function handleChange(event) {
       const newValue = event.target.value;
@@ -11,10 +15,22 @@ export default function Profile () {
     }
   
     function addItem() {
-      setItems(prevItems => {
-        return [...prevItems, inputText];
-      });
-      setInputText("");
+                   
+        if (items.length <= 5){
+            if(items.length < 5 && inputText){
+                setItems(prevItems => {
+                    return [...prevItems, inputText];
+                  });
+                  setInputText("");
+            } 
+            else {
+                console.log('done')
+            }
+            localStorage.setItem("key", items)
+            console.log(localStorage.getItem('key'))
+        }
+        
+      
     }
   
     function deleteItem(id) {
@@ -23,32 +39,39 @@ export default function Profile () {
           return index !== id;
         });
       });
+      localStorage.removeItem('key')
+      localStorage.setItem('key', items)
+      console.log(localStorage.getItem('key'))
+
     }
+
     
-    render() {
-        return (
-        <div className="container">
-            <div className="heading">
-                <h1>To-Do List</h1>
+    return (
+        <div className="profile">
+            <BGvid />
+            <div className="profile--heading">
+                <h1 className="profile--heading__text">Pick your LiveStyle</h1>
             </div>
-            <div className="form">
-                <input onChange={handleChange} type="text" value={stateinputText} />
-                <button onClick={addItem}>
-                <span>Add</span>
+            <div className="profile--form">
+                <input className="profile--form__input" onChange={handleChange} type="text" value={inputText} />
+                <button className="profile--form__button" onClick={addItem}>
+                <span>ADD</span>
                 </button>
             </div>
-            <div>
-                <ul>
+            <div className="profile--list">
+                <ul className="profile--list__ul">
                 {items.map((todoItem, index) => (
-                    <div key={index} onClick={() => {
+                    <div className="profile--list__container" key={index} onClick={() => {
                             deleteItem(index);
                         }}>
-                        <li>{todoItem}</li>
+                        <li className="profile--list__item">{todoItem}</li>
                     </div>
                 ))}
                 </ul>
             </div>
+            
+            <Link to="/home" links={props.links} ready={props.ready} ><button className="profile--button">Country Roads</button></Link>
+            
         </div>
-        )
-    }
+    )
 }

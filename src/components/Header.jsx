@@ -16,8 +16,9 @@ export default class Header extends Component {
                 </h1>
 
                 <div className="btn-home">
-                    <Link to="/login"><button className="btn-home__log-in">Log in</button></Link>
-                    <Link to="/signup"><button className="btn-home__sign-up">Sign up</button></Link>
+                    {/* <Link to="/login"><button className="btn-home__log-in">Log in</button></Link>
+                    <Link to="/signup"><button className="btn-home__sign-up">Sign up</button></Link> */}
+                    <Link to="/profile"><button className="btn-home__sign-up">Edit your LiveStyle</button></Link>
                 </div>
 
             </div>

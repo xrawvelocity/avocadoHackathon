@@ -788,6 +788,83 @@ body {
   background-color: #050608;
   background-image: linear-gradient(to bottom, #282828 0%, rgba(204, 204, 204, 0.75) 20%, #eeeeee 100%); }
 
+.profile {
+  display: flex;
+  flex-direction: column; }
+  .profile--heading__text {
+    font-size: 4rem;
+    font-weight: 400;
+    margin-left: 1rem;
+    letter-spacing: 2rem;
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center;
+    position: absolute;
+    top: 28%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+  .profile--form {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -70%); }
+    .profile--form__input {
+      width: 50rem;
+      padding: 1rem 4rem;
+      font-size: 2rem;
+      border: none;
+      border-radius: 2rem;
+      background-color: #ccc;
+      transition: all .2s; }
+      .profile--form__input:hover, .profile--form__input:active, .profile--form__input:focus {
+        background-color: #f7f7f7; }
+    .profile--form__button {
+      margin: 40px 0 40px -80px;
+      border: none;
+      padding: 1rem 3.5rem 1rem 3.5rem;
+      border-radius: 2rem;
+      background-color: darkgreen;
+      color: #fff;
+      transition: all .2s;
+      font-size: 2rem;
+      font-weight: 700; }
+      .profile--form__button:hover, .profile--form__button:active, .profile--form__button:focus {
+        background-color: #007800; }
+  .profile--list {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(5, 6, 8, 0.7);
+    padding: 3rem 5rem;
+    border-radius: 20px; }
+    .profile--list__ul {
+      list-style: none;
+      width: 50rem;
+      height: 20rem; }
+    .profile--list__container {
+      margin: 1rem; }
+    .profile--list__item {
+      color: #fff;
+      font-size: 1.8rem;
+      font-weight: 500; }
+  .profile--button {
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 100px 0 40px 0;
+    border: none;
+    padding: 1rem 3.5rem 1rem 3.5rem;
+    border-radius: 2rem;
+    background-color: darkgreen;
+    color: #fff;
+    transition: all .2s;
+    font-size: 2rem;
+    font-weight: 700; }
+    .profile--button:hover, .profile--button:active, .profile--button:focus {
+      background-color: #007800; }
+
 .contain {
   width: 100%; }
 
