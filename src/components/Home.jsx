@@ -24,11 +24,17 @@ export default class Home extends Component {
               .then(res=>res.json())
               .then(async data=>{
                   
-                  this.setState({
-                      ready: true
+                  await this.setState({
+                      prevLinks: data,
+                      
                   })
+                  this.state.links.push(this.state.prevLinks)
+                  console.log(this.state.links)
               })
                 
+              await this.setState({
+                ready: true
+            })
               
             })
             console.log(this.state.links)
@@ -92,7 +98,7 @@ export default class Home extends Component {
                         <div className="row--youtube">
                         <div className="row__inner">
                         {/* {this.showVideos()} */}
-                            {this.props.ready ? this.showVideos() : this.showLoading()}
+                            {this.state.ready ? this.showVideos() : this.showLoading()}
                         </div>
                         </div>
                         </div>

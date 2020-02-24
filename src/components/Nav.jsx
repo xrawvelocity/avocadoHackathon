@@ -1,7 +1,13 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 
 
 export default class Nav extends Component {
+
+    hideNav = () => {
+        document.getElementById("navi-toggle").checked = false;
+    }
+
     render() {
         return (
         <div className="navigation">
@@ -15,11 +21,11 @@ export default class Nav extends Component {
 
             <nav className="navigation__nav">
                 <ul className="navigation__list">
-                    <li className="navigation__item">Profile</li>
-                    <li className="navigation__item">Youtube</li>
-                    <li className="navigation__item">Amazon</li>
-                    <li className="navigation__item">Podcasts</li>
-                    <li className="navigation__item">Contact</li>
+                    <li onClick={this.hideNav} className="navigation__item"><Link to="/profile" className="navigation__link">Profile</Link></li>
+                    <li onClick={this.hideNav} className="navigation__item"><Link to="/home" className="navigation__link">Home</Link></li>
+                    <li onClick={this.hideNav} className="navigation__item"><Link to="/" className="navigation__link">Start</Link></li>
+                    <li onClick={this.hideNav} className="navigation__item"><Link to="/" className="navigation__link">Podcasts</Link></li>
+                    <li onClick={this.hideNav} className="navigation__item"><Link to="/" className="navigation__link">Contact</Link></li>
                 </ul>
             </nav>
         </div>

@@ -14,6 +14,19 @@ export default class Profile extends Component {
           }
     }
 
+    componentDidMount(){
+        if(localStorage.getItem('list')){
+            this.setState({
+                list:JSON.parse(localStorage.getItem('list'))
+            });
+        }
+        else {
+            this.setState({
+                list: []
+            })
+        }
+    }
+
 
     addItem=()=>{
     
