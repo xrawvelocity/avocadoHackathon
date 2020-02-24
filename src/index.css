@@ -757,6 +757,16 @@ body {
   .form__radio-input:checked ~ .form__radio-label .form__radio-button::after {
     opacity: 1; }
 
+.home--scrolling-text {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 3rem;
+  position: absolute;
+  top: 8.5%;
+  left: 25%;
+  width: 50%;
+  background-color: #333333; }
+
 .home--intro {
   background-image: linear-gradient(to bottom, rgba(5, 6, 8, 0.01) 0%, rgba(5, 6, 8, 0.85) 80%, #050608 100%); }
   .home--intro__quote {
@@ -800,12 +810,12 @@ body {
     color: #fff;
     text-align: center;
     position: absolute;
-    top: 28%;
+    top: 25%;
     left: 50%;
     transform: translate(-50%, -50%); }
   .profile--form {
     position: absolute;
-    top: 45%;
+    top: 43%;
     left: 50%;
     transform: translate(-50%, -70%); }
     .profile--form__input {
@@ -843,14 +853,21 @@ body {
       width: 50rem;
       height: 20rem; }
     .profile--list__container {
-      margin: 1rem; }
+      margin: 1.5rem;
+      display: flex;
+      justify-content: center; }
     .profile--list__item {
       color: #fff;
       font-size: 1.8rem;
       font-weight: 500; }
+    .profile--list__icon {
+      cursor: pointer;
+      font-size: 2rem;
+      color: #FF3126;
+      padding: .5rem 0 0 1.5rem; }
   .profile--button {
     position: absolute;
-    top: 85%;
+    top: 80%;
     left: 50%;
     transform: translate(-50%, -50%);
     margin: 100px 0 40px 0;
