@@ -1,9 +1,18 @@
 import React, { Component } from 'react'
-
-// cJ1m8PxP5gDYStJc2YVonHw7EEu9F+4RxetTdc/2 amazon secret key
-// AKIAIIOBG5FFO4ASXOHA amazon access key
+import cheerio from 'cheerio';
+import axios from 'axios'
 
 export default class AmazonItem extends Component {
+
+    componentDidMount() {
+        axios.get('https://cors-anywhere.herokuapp.com/https://www.amazon.com/s?k=skate+board&ref=nb_sb_noss_2')
+        .then(res => {
+            const $ = cheerio.load(res.data)
+            console.log($)
+            const urlElems = $("div.a-section.a-spacing-medium")
+            console.log(urlElems)
+        })
+    }
     render() {
         return (
             <div>
