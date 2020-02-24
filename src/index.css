@@ -794,9 +794,22 @@ body {
     align-items: center; }
 
 .home--main__amazon {
-  height: 100vh;
+  padding-top: 25rem;
+  height: 120vh;
   background-color: #050608;
   background-image: linear-gradient(to bottom, #282828 0%, rgba(204, 204, 204, 0.75) 20%, #eeeeee 100%); }
+  .home--main__amazon--img {
+    height: 375px;
+    width: auto;
+    margin: -12rem 0 -4rem 0; }
+  .home--main__amazon--grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 40px 40px;
+    margin: 0 10rem 0 10rem; }
+  .home--main__amazon--link {
+    height: 240px;
+    width: 100%; }
 
 .profile {
   display: flex;

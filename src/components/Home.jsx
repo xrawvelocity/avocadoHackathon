@@ -3,8 +3,11 @@ import React, { Component } from 'react'
 import BGvid from './BGvid';
 // import YouTube from './YouTube'
 import Footer from './Footer';
+import AmazonItem from './AmazonItem';
+import AdBlockDetect from 'react-ad-block-detect';
 
 let key = 'AIzaSyCL9rLbM01CmVdUgYZWFYUIqcYUsso7MDQ';
+let key2 = 'AIzaSyCRlttHdu2haccytjzgvKVCkNIXc_PWR5A';
 
 export default class Home extends Component {
 
@@ -14,33 +17,34 @@ export default class Home extends Component {
         ready: false
       }
 
-    async componentDidMount(){
-        console.log('componentdidmount')
-        if(localStorage.getItem('list')){
-          const list = window.localStorage.getItem('list');
-            const parsedList = JSON.parse(list);
-            await parsedList.map( async item => {
-              await fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=5&order=relevance&q=${item.value}&type=video&videoEmbeddable=true&key=${key}`)
-              .then(res=>res.json())
-              .then(async data=>{
+    // async componentDidMount(){
+    //     console.log('componentdidmount')
+    //     console.log(localStorage.getItem('list'))
+    //     if(localStorage.getItem('list')){
+    //       const list = window.localStorage.getItem('list');
+    //         const parsedList = JSON.parse(list);
+    //         await parsedList.map( async item => {
+    //           await fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=5&order=relevance&q=${item.value}&type=video&videoEmbeddable=true&key=${key2}`)
+    //           .then(res=>res.json())
+    //           .then(async data=>{
                   
-                  await this.setState({
-                      prevLinks: data,
+    //               await this.setState({
+    //                   prevLinks: data,
                       
-                  })
-                  this.state.links.push(this.state.prevLinks)
-                  console.log(this.state.links)
-              })
+    //               })
+    //               this.state.links.push(this.state.prevLinks)
+    //               console.log(this.state.links)
+    //           })
                 
-              await this.setState({
-                ready: true
-            })
+    //           await this.setState({
+    //             ready: true
+    //         })
               
-            })
-            console.log(this.state.links)
+    //         })
+    //         console.log(this.state.links)
             
-        }
-    }
+    //     }
+    // }
 
     showVideos = () => {
         console.log('showvideos')
@@ -54,6 +58,7 @@ export default class Home extends Component {
             })
         }) 
     }
+    
 
     showCategories = () => {
         const list = window.localStorage.getItem('list');
@@ -92,7 +97,7 @@ export default class Home extends Component {
                     <section className="home--main__youtube">
 
                         <a href="http://www.youtube.com">
-                        <img className="home--main__youtube--img" alt="YT logo" src="./images/yt_logo_rgb_dark.png"/>
+                            <img className="home--main__youtube--img" alt="YT logo" src="./images/yt_logo_rgb_dark.png"/>
                         </a>
                         <div className="home--main__youtube--carousel">
                         <div className="row--youtube">
@@ -104,7 +109,40 @@ export default class Home extends Component {
                         </div>
                         
                     </section>
-                    <section className="home--main__amazon"></section>
+                    <section className="home--main__amazon">
+                    <AdBlockDetect>
+                        <p>please disable adblock to see this amazon section</p>
+                    </AdBlockDetect>
+                    <a href="http://www.amazon.com">
+                        <img className="home--main__amazon--img" alt="Amazon logo" src="./images/amazon-logo.png"/>
+                    </a>
+                    <div className="home--main__amazon--grid">
+
+                    <AmazonItem/>
+                    <AmazonItem/>
+                    <AmazonItem/>
+                    <AmazonItem/>
+                    <AmazonItem/>
+                    <AmazonItem/>
+                    <AmazonItem/>
+                    <AmazonItem/>
+                    <AmazonItem/>
+                    <AmazonItem/>
+                    <AmazonItem/>
+                    <AmazonItem/>
+                    <AmazonItem/>
+                    <AmazonItem/>
+                    <AmazonItem/>
+                    <AmazonItem/>
+                    <AmazonItem/>
+                    <AmazonItem/>
+                    <AmazonItem/>
+                    <AmazonItem/>
+                  
+
+                    </div>
+        
+                    </section>
                 </div>
                 <Footer />            
             </main>
