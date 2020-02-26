@@ -71,11 +71,10 @@
                 margin: -12rem 0 -4rem 0;
             }
 
-            &--grid {
-                display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-                gap: 40px 40px;
-                margin: 0 10rem 0 10rem;
+            &--carousel {
+                display: flex;
+                justify-content: center;
+                align-items: center;
             }
 
             &--link {
