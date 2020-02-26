@@ -793,14 +793,14 @@ body {
     align-items: center; }
 
 .home--main__amazon {
-  padding-top: 25rem;
+  padding-top: 15rem;
   height: 120vh;
   background-color: #050608;
   background-image: linear-gradient(to bottom, #282828 0%, rgba(204, 204, 204, 0.75) 20%, #eeeeee 100%); }
   .home--main__amazon--img {
-    height: 375px;
+    height: 100px;
     width: auto;
-    margin: -12rem 0 -4rem 0; }
+    margin: 5rem 0; }
   .home--main__amazon--carousel {
     display: flex;
     justify-content: center;
@@ -896,7 +896,7 @@ body {
 .amazon-item {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   height: 500px;
   width: 320px;
@@ -904,11 +904,19 @@ body {
   background-color: #ddd;
   border-radius: 2px; }
   .amazon-item__img {
-    height: auto;
-    width: 70%;
-    padding: 1rem; }
+    object-fit: cover;
+    width: auto;
+    margin-top: 2rem; }
     .amazon-item__img--container {
-      background-color: #ccc; }
+      min-height: 250px; }
+  .amazon-item__text {
+    background-color: #ccc;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 200px;
+    padding-top: 10px; }
   .amazon-item__title {
     color: #111;
     padding: .5rem 1.5rem;
@@ -918,7 +926,7 @@ body {
     padding: .5rem 1.5rem;
     font-weight: 700;
     font-size: 2rem; }
-  .amazon-item__btn {
+  .amazon-item__btn-buy {
     font-size: 2rem;
     font-weight: 700;
     text-decoration: none;
@@ -926,13 +934,26 @@ body {
     border: 1px solid;
     border-color: #a88734 #9c7e31 #846a29;
     width: 100%;
+    display: block;
     padding: .5rem 1rem;
     border-radius: 2px; }
-    .amazon-item__btn:active, .amazon-item__btn:visited, .amazon-item__btn:link {
+    .amazon-item__btn-buy:active, .amazon-item__btn-buy:visited, .amazon-item__btn-buy:link {
       color: #0066c0; }
-    .amazon-item__btn:hover {
+    .amazon-item__btn-buy:hover {
       background-color: #fdaf27;
       color: #025195; }
+  .amazon-item__btn-fav {
+    font-size: 2rem;
+    font-weight: 700;
+    text-decoration: none;
+    width: 100%;
+    padding: .7rem 1rem;
+    background: linear-gradient(to bottom, #f7f8fa, #e7e9ec);
+    border-radius: 3px 0 0 3px;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.6) inset; }
+    .amazon-item__btn-fav:hover {
+      cursor: pointer;
+      background: linear-gradient(to bottom, #fff, #fff); }
 
 .row--youtube {
   max-width: 114rem;
@@ -950,29 +971,44 @@ body {
   padding: 0 50px;
   padding-bottom: 10px; }
 
+.container {
+  display: flex;
+  flex-direction: column; }
+
 .tile {
   position: relative;
   display: inline-block;
-  width: 290px;
-  height: 180.625px;
+  width: 550px;
+  height: 340.625px;
   margin-right: 10px;
   font-size: 20px;
   cursor: pointer;
   transition: 450ms all;
   transform-origin: left; }
-
-.row__inner:hover {
-  transform: translate3d(-62.5px, 0, 0); }
+  .tile--yt__fav-btn, .tile--yt__fav-btn:link, .tile--yt__fav-btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: .5rem 1rem;
+    width: 90%;
+    margin: 1.5rem;
+    display: inline-block;
+    border-radius: 5rem;
+    font-size: 1.8rem;
+    transition: all .1s;
+    position: relative; }
+  .tile--yt__fav-btn:hover {
+    background-color: #fff;
+    cursor: pointer;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
+  .tile--yt__fav-btn:active, .tile--yt__fav-btn:focus {
+    outline: none;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
 
 .row__inner:hover .tile {
   opacity: 0.3; }
 
 .row__inner:hover .tile:hover {
-  transform: scale(1.5);
   opacity: 1; }
-
-.tile:hover ~ .tile {
-  transform: translate3d(125px, 0, 0); }
 
 .row--amazon {
   max-width: 114rem;
@@ -999,9 +1035,8 @@ body {
   display: inline-block;
   width: 290px;
   height: auto;
-  margin: 10px 60px;
+  margin: 10px 50px;
   font-size: 20px;
-  cursor: pointer;
   transition: 450ms all;
   transform-origin: left; }
 
@@ -1392,7 +1427,7 @@ body {
   text-decoration: none;
   text-transform: uppercase;
   background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #FDAF37 50%);
-  background-size: 225%;
+  background-size: 235%;
   transition: all .4s; }
   @media only screen and (max-width: 37.5em) {
     .navigation__link:link, .navigation__link:visited {

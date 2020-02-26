@@ -30,7 +30,7 @@ export default class Profile extends Component {
 
     addItem=()=>{
     
-    const Items={
+        const Items={
             id:uuid.v4(),
             value:this.input.current.value,
         };
@@ -40,11 +40,13 @@ export default class Profile extends Component {
             list.push(Items);
             localStorage.setItem("list",JSON.stringify(list))
         }
-        else{
+
+        else {
             const list=JSON.parse(localStorage.getItem('list'))
             list.push(Items)
             localStorage.setItem("list",JSON.stringify(list))
         }
+        
         this.setState({
             list:JSON.parse(localStorage.getItem('list'))
         });

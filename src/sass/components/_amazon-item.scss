@@ -1,10 +1,8 @@
 .amazon-item {
 
-    // MAKE INTO GRID
-
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     height: 500px;
     width: 320px;
@@ -13,13 +11,24 @@
     border-radius: 2px;
 
     &__img {
-        height: auto;
-        width: 70%;
-        padding: 1rem;
+        object-fit: cover;
+        
+        width: auto;
+        margin-top: 2rem;
 
         &--container {
-            background-color: #ccc;
+            min-height: 250px;
         }
+    }
+
+    &__text {
+        background-color: #ccc;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+        height: 200px;
+        padding-top: 10px;
     }
 
     &__title {
@@ -36,25 +45,46 @@
     }
 
     &__btn {
-        font-size: 2rem;
-        font-weight: 700;
-        text-decoration: none;
-        background-color: #f0c14b;
-        border: 1px solid;
-        border-color: #a88734 #9c7e31 #846a29;
-        width: 100%;
-        padding: .5rem 1rem;
-        border-radius: 2px;
 
-        &:active,
-        &:visited,
-        &:link {
-            color: #0066c0;
+        &-buy {
+            font-size: 2rem;
+            font-weight: 700;
+            text-decoration: none;
+            background-color: #f0c14b;
+            border: 1px solid;
+            border-color: #a88734 #9c7e31 #846a29;
+            width: 100%;
+            display: block;
+            padding: .5rem 1rem;
+            border-radius: 2px;
+
+            &:active,
+            &:visited,
+            &:link {
+                color: #0066c0;
+            }
+
+            &:hover {
+                background-color: #fdaf27;
+                color: #025195;
+            }
         }
 
-        &:hover {
-            background-color: #fdaf27;
-            color: #025195;
+        &-fav {
+            font-size: 2rem;
+            font-weight: 700;
+            text-decoration: none;
+            width: 100%;
+            padding: .7rem 1rem;
+            
+            background: linear-gradient(to bottom,#f7f8fa,#e7e9ec);
+            border-radius: 3px 0 0 3px;
+            box-shadow: 0 1px 0 rgba(255,255,255,.6) inset;
+
+            &:hover {
+                cursor: pointer;
+                background: linear-gradient(to bottom,#fff,#fff);
+            }
         }
     }
 }
