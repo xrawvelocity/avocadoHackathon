@@ -902,7 +902,8 @@ body {
   width: 320px;
   white-space: normal;
   background-color: #ddd;
-  border-radius: 2px; }
+  border-radius: 2px;
+  box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.2); }
   .amazon-item__img {
     object-fit: cover;
     width: auto;
@@ -936,7 +937,8 @@ body {
     width: 100%;
     display: block;
     padding: .5rem 1rem;
-    border-radius: 2px; }
+    border-radius: 2px;
+    transition: all .2s ease-in-out; }
     .amazon-item__btn-buy:active, .amazon-item__btn-buy:visited, .amazon-item__btn-buy:link {
       color: #0066c0; }
     .amazon-item__btn-buy:hover {
@@ -948,6 +950,7 @@ body {
     text-decoration: none;
     width: 100%;
     padding: .7rem 1rem;
+    transition: all .2s ease-in-out;
     background: linear-gradient(to bottom, #f7f8fa, #e7e9ec);
     border-radius: 3px 0 0 3px;
     box-shadow: 0 1px 0 rgba(255, 255, 255, 0.6) inset; }
@@ -980,7 +983,7 @@ body {
   display: inline-block;
   width: 550px;
   height: 340.625px;
-  margin-right: 10px;
+  margin: 20px;
   font-size: 20px;
   cursor: pointer;
   transition: 450ms all;
@@ -992,12 +995,14 @@ body {
     width: 90%;
     margin: 1.5rem;
     display: inline-block;
-    border-radius: 5rem;
+    border-radius: 1px;
     font-size: 1.8rem;
     transition: all .1s;
-    position: relative; }
+    position: relative;
+    background: linear-gradient(to bottom, #f7f8fa, #e7e9ec);
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.6) inset; }
   .tile--yt__fav-btn:hover {
-    background-color: #fff;
+    background: linear-gradient(to bottom, #fff, #fff);
     cursor: pointer;
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
   .tile--yt__fav-btn:active, .tile--yt__fav-btn:focus {
@@ -1358,7 +1363,7 @@ body {
         width: 100%;
         float: none; } }
 
-.navigation > *:not(:last-child) {
+.navigation-animation > *:not(:last-child) {
   animation: fadeIn 10s cubic-bezier(0.165, 0.84, 0.44, 1);
   animation-fill-mode: forwards; }
 
@@ -1405,7 +1410,8 @@ body {
   right: 0;
   z-index: 1500;
   opacity: 0;
-  transition: all 0.7s cubic-bezier(0.86, 0, 0.07, 1); }
+  transition: all 0.7s cubic-bezier(0.86, 0, 0.07, 1);
+  transform: translate3d(50rem, 0, 0); }
 
 .navigation__list {
   position: absolute;
@@ -1436,7 +1442,7 @@ body {
 .navigation__link:hover, .navigation__link:active {
   background-position: 100%;
   color: #101B3B;
-  transform: translateX(1rem); }
+  transform: translateX(0.7rem); }
   @media only screen and (max-width: 37.5em) {
     .navigation__link:hover, .navigation__link:active {
       background-size: 300%; } }
@@ -1446,7 +1452,8 @@ body {
 
 .navigation__checkbox:checked ~ .navigation__nav {
   opacity: 1;
-  width: 100%; }
+  width: 100%;
+  transform: translate3d(0, 0, 0); }
 
 .navigation__icon {
   position: relative;

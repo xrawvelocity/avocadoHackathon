@@ -2,6 +2,7 @@
 import React, { Component } from 'react'
 import BGvid from './BGvid';
 import Footer from './Footer';
+import Nav from './Nav';
 import AmazonItem from './AmazonItem';
 import AdBlockDetect from 'react-ad-block-detect';
 import uuid from 'uuid';
@@ -17,9 +18,7 @@ export default class Home extends Component {
     state = {
         links: [],
         prevLinks: [],
-        favoriteVideos: [],
         amazonItems: [],
-        favoriteItems: [],
         ytReady: false,
         amReady: false
       }
@@ -34,26 +33,27 @@ export default class Home extends Component {
 
             //YOUTUBE API REQUEST
 
-            // await fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=5&order=relevance&q=${item.value}&type=video&videoEmbeddable=true&key=${key2}`)
-            // .then(res=>res.json())
-            // .then(async data=>{
-            //     await this.setState({
-            //         prevLinks: data,
-            //     })
+            await fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=5&order=relevance&q=${item.value}&type=video&videoEmbeddable=true&key=${key}`)
+            .then(res=>res.json())
+            .then(async data=>{
+                await this.setState({
+                    prevLinks: data,
+                })
 
-            //     this.state.links.push(this.state.prevLinks)
+                this.state.links.push(this.state.prevLinks)
                 
-            // })
+            })
             
             //CUSTOM API WEB SCRAPING AMAZON
             //pending heroku deployment
 
             let r = await axios.get(`http://localhost:3000/scrapeAmazon?q=${item.value}`)
             
-
-            for(let i=2; i<7;i++){
+            console.log(r)
+            for(let i=4; i<9;i++){
                 await this.state.amazonItems.push(r.data.amazonList[i])
             }
+            console.log(this.state.amazonItems)
 
             await this.setState({
                 ytReady: true,
@@ -63,17 +63,6 @@ export default class Home extends Component {
         })
             
         }
-
-        // if(localStorage.getItem('favoriteVideos')){
-        //     this.setState({
-        //         favoriteVideos:JSON.parse(localStorage.getItem('favoriteVideos'))
-        //     });
-        // }
-        // else {
-        //     this.setState({
-        //         favoriteVideos: []
-        //     })
-        // }
         
     }
 
@@ -94,10 +83,6 @@ export default class Home extends Component {
             favoriteVideos.push(Items)
             localStorage.setItem("favoriteVideos",JSON.stringify(favoriteVideos))
         }
-        
-        this.setState({
-            favoriteVideos:JSON.parse(localStorage.getItem('favoriteVideos'))
-        });
     }
 
     addToFavoriteItems = (item) => {
@@ -116,12 +101,7 @@ export default class Home extends Component {
             const favoriteItems=JSON.parse(localStorage.getItem('favoriteItems'))
             favoriteItems.push(Items)
             localStorage.setItem("favoriteItems",JSON.stringify(favoriteItems))
-        }
-        
-        this.setState({
-            favoriteItems:JSON.parse(localStorage.getItem('favoriteItems'))
-        });
-        
+        }        
     }
 
     showVideos = () => {
@@ -132,7 +112,7 @@ export default class Home extends Component {
                     <div key={uuid.v4()} className="tile">
                         <div className="container">
 
-                            <iframe width="550" height="340.625" title='test' src={`https://www.youtube.com/embed/${eachVideo.id.videoId}`} frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                            <iframe width="540" height="330.625" title='test' src={`https://www.youtube.com/embed/${eachVideo.id.videoId}`} frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
 
                             <button onClick={() => this.addToFavoriteVideos(eachVideo.id.videoId)} className="tile--yt__fav-btn">Add to Favorites</button>
 
@@ -146,13 +126,13 @@ export default class Home extends Component {
     showAmazon = () => {
         console.log('show amazon')
         return this.state.amazonItems.map(eachItem=> {
-            if(eachItem.title !== ''){
+            // if(eachItem.title !== '' || eachItem.title === 'gp'){
                 return (
                     <div key={uuid.v4()} className="tile-amazon">
-                        <AmazonItem title={eachItem.title} image={eachItem.img} link={`https://www.amazon.com/${eachItem.url}`} price={eachItem.price} addToFavoriteItems={this.addToFavoriteItems}/>
+                        <AmazonItem title={eachItem.title} image={eachItem.img} link={`https://www.amazon.com/${eachItem.url}`} price={eachItem.price} addToFavoriteItems={this.addToFavoriteItems} home={true}/>
                     </div>
                 )           
-            }
+            // }
         }) 
     }
     
@@ -194,7 +174,7 @@ export default class Home extends Component {
     render() {
         return (
             <main className="home">
-
+                <Nav main={false} />
                 <div className="home--intro">
                     <BGvid />
                     <section className="home--intro__quote">

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import BGvid from './BGvid';
+import Nav from './Nav';
 import uuid from 'uuid'
 
 export default class Profile extends Component {
@@ -46,7 +47,7 @@ export default class Profile extends Component {
             list.push(Items)
             localStorage.setItem("list",JSON.stringify(list))
         }
-        
+
         this.setState({
             list:JSON.parse(localStorage.getItem('list'))
         });
@@ -82,6 +83,7 @@ export default class Profile extends Component {
     render(){
         return (
         <div className="profile">
+            <Nav main={false} />
             <BGvid />
             <div className="profile--heading">
                 <h1 className="profile--heading__text">Pick your LiveStyle</h1>

@@ -9,6 +9,7 @@
     white-space: normal;
     background-color: #ddd;
     border-radius: 2px;
+    box-shadow: 0 1rem 1rem rgba(0,0,0,.2);
 
     &__img {
         object-fit: cover;
@@ -57,6 +58,7 @@
             display: block;
             padding: .5rem 1rem;
             border-radius: 2px;
+            transition: all .2s ease-in-out;
 
             &:active,
             &:visited,
@@ -76,7 +78,7 @@
             text-decoration: none;
             width: 100%;
             padding: .7rem 1rem;
-            
+            transition: all .2s ease-in-out;
             background: linear-gradient(to bottom,#f7f8fa,#e7e9ec);
             border-radius: 3px 0 0 3px;
             box-shadow: 0 1px 0 rgba(255,255,255,.6) inset;

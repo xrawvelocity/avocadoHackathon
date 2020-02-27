@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 
 export default class AmazonItem extends Component {
 
-    limitTitle = (title, limit = 40) => {
+    limitTitle = (title, limit = 50) => {
         const newTitle = [];
         if(title.length > limit){
             title.split(' ').reduce((acc,cur) => {
@@ -30,7 +30,22 @@ export default class AmazonItem extends Component {
                     <span className="amazon-item__price">{this.props.price}</span>
                     <div className="amazon-item__btn">
                         <a rel="noopener noreferrer" target="_blank" className="amazon-item__btn-buy" href={this.props.link}>Buy now</a>
-                        <button onClick={() => this.props.addToFavoriteItems(this.props.link)} className="amazon-item__btn-fav">Add to Favorites</button>
+                        {this.props.home ? 
+                            <button onClick={() => this.props.addToFavoriteItems({
+                            image:this.props.image,
+                            title:this.props.title,
+                            price:this.props.price,
+                            link:this.props.link
+                        })}
+                        className="amazon-item__btn-fav">Add to Favorites</button>:
+                        <button onClick={() => this.props.removeFromFavoriteItems({
+                            image:this.props.image,
+                            title:this.props.title,
+                            price:this.props.price,
+                            link:this.props.link
+                        })}
+                        className="amazon-item__btn-fav">Remove from Favorites</button>
+                        }
                     </div>
                 </div>
             </div>

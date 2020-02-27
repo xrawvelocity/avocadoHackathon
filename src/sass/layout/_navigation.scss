@@ -1,7 +1,11 @@
 .navigation {
-    & > *:not(:last-child) {
-        animation: fadeIn 10s cubic-bezier(0.165, 0.84, 0.44, 1);
-        animation-fill-mode: forwards;
+    
+
+    &-animation {
+        & > *:not(:last-child) {
+            animation: fadeIn 10s cubic-bezier(0.165, 0.84, 0.44, 1);
+            animation-fill-mode: forwards;
+        }
     }
 
     &__checkbox {
@@ -54,6 +58,7 @@
         z-index: 1500;
         opacity: 0;
         transition: all .7s cubic-bezier(0.86, 0, 0.07, 1);
+        transform: translate3d(50rem,0,0);
     }
 
     &__list {
@@ -81,6 +86,7 @@
             background-image: linear-gradient(120deg, transparent 0%, transparent 50%, $color-primary-1 50%);
             background-size: 235%;
             transition: all .4s;
+            
 
             @include respond(phone){
                 background-image: linear-gradient(120deg, transparent 0%, transparent 60%, $color-primary-1 60%);
@@ -90,7 +96,7 @@
         &:active {
             background-position: 100%;
             color: $color-navy-1;
-            transform: translateX(1rem);
+            transform: translateX(.7rem);
 
             @include respond(phone){
                 background-size: 300%;
@@ -104,6 +110,7 @@
     &__checkbox:checked ~ &__nav {
         opacity: 1;
         width: 100%;
+        transform: translate3d(0,0,0);
     }
 
 
