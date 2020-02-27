@@ -131,7 +131,7 @@ export default class Home extends Component {
     showAmazon = () => {
         console.log('show amazon')
         return this.state.amazonItems.map(eachItem=> {
-            if(eachItem.title !== '' || eachItem.title === 'gp'){
+            if(eachItem.title !== '' && eachItem.title !== 'gp'){
                 return (
                     <div key={uuid.v4()} className="tile-amazon">
                         <AmazonItem title={eachItem.title} image={eachItem.img} link={`https://www.amazon.com/${eachItem.url}`} price={eachItem.price} addToFavoriteItems={this.addToFavoriteItems} home={true}/>
