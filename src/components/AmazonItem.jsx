@@ -29,7 +29,7 @@ export default class AmazonItem extends Component {
                     <h2 className="amazon-item__title">{this.limitTitle(this.props.title)}</h2>
                     <span className="amazon-item__price">{this.props.price}</span>
                     <div className="amazon-item__btn">
-                        <a rel="noopener noreferrer" target="_blank" className="amazon-item__btn-buy" href={this.props.link}>Buy now</a>
+                        <a rel="noopener noreferrer" target="_blank" className="amazon-item__btn-buy" href={this.props.link}>Open in Amazon</a>
                         {this.props.home ? 
                             <button onClick={() => this.props.addToFavoriteItems({
                             image:this.props.image,
@@ -37,13 +37,13 @@ export default class AmazonItem extends Component {
                             price:this.props.price,
                             link:this.props.link
                         })}
-                        className="amazon-item__btn-fav">Add to Favorites</button>:
+                        className="amazon-item__btn-fav">Add to Favorites <span className="amazon-item__btn-fav__success">*</span></button>:
                         <button onClick={() => {
                             console.log(this.props.image);
                             this.props.removeFromFavoriteItems(this.props.image)
                             }
                         }
-                        className="amazon-item__btn-fav">Remove from Favorites</button>
+                        className="amazon-item__btn-fav">Remove from Favorites  <span className="amazon-item__btn-fav__success">X</span></button>
                         }
                     </div>
                 </div>

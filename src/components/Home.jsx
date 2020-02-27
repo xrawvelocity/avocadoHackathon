@@ -45,8 +45,8 @@ export default class Home extends Component {
             
             //CUSTOM API WEB SCRAPING AMAZON
             //pending heroku deployment
-
-            let r = await axios.get(`http://localhost:3000/scrapeAmazon?q=${item.value}`)
+            console.log(item.value)
+            let r = await axios.get(`https://dry-retreat-09106.herokuapp.com/scrapeAmazon?q=${item.value}`).catch(err => console.error(err))
             
             console.log(r)
             for(let i=5; i<10;i++){
@@ -120,7 +120,6 @@ export default class Home extends Component {
                             </button>
                             
                             
-
                         </div>
                     </div>
                 )

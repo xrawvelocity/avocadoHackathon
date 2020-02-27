@@ -953,11 +953,32 @@ body {
     padding: .7rem 1rem;
     transition: all .2s ease-in-out;
     background: linear-gradient(to bottom, #f7f8fa, #e7e9ec);
-    border-radius: 3px 0 0 3px;
+    border: none;
     box-shadow: 0 1px 0 rgba(255, 255, 255, 0.6) inset; }
     .amazon-item__btn-fav:hover {
-      cursor: pointer;
-      background: linear-gradient(to bottom, #fff, #fff); }
+      background: linear-gradient(to bottom, #fdaf27, #fdaf27);
+      color: #025195;
+      border: none;
+      cursor: pointer; }
+    .amazon-item__btn-fav:active {
+      background: linear-gradient(to bottom, #ec9b22, #ec9b22);
+      border: none;
+      transform: translate3d(0, 0.1rem, 0);
+      outline: none;
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
+    .amazon-item__btn-fav__success {
+      opacity: 0;
+      margin: 0 -1rem 0 1rem; }
+    .amazon-item__btn-fav:focus .amazon-item__btn-fav__success {
+      animation: favSuccess 2.5s cubic-bezier(0.165, 0.84, 0.44, 1); }
+
+@keyframes favSuccess {
+  0% {
+    opacity: 0; }
+  50% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
 
 .row--youtube {
   max-width: 114rem;
@@ -996,18 +1017,20 @@ body {
     width: 90%;
     margin: 1.5rem;
     display: inline-block;
+    border: none;
     font-size: 1.8rem;
     transition: all .2s;
     position: relative;
     background: linear-gradient(to bottom, #f7f8fa, #e7e9ec);
     box-shadow: 0 1px 0 rgba(255, 255, 255, 0.6) inset; }
   .tile--yt__fav-btn:hover {
-    background: linear-gradient(to bottom, #fff, #fff);
+    background: linear-gradient(to bottom, #FDAF37, #FDAF37);
+    border: none;
     cursor: pointer;
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
     transform: translate3d(0, -0.2rem, 0); }
   .tile--yt__fav-btn:active {
-    background: linear-gradient(to bottom, #007800, #006600);
+    background: linear-gradient(to bottom, #ec9b22, #ec9b22);
     border: none;
     transform: translate3d(0, 0.1rem, 0);
     outline: none;
@@ -1048,6 +1071,12 @@ body {
   font-size: 20px;
   transition: 450ms all;
   transform-origin: left; }
+
+.row__inner-amazon:hover .tile-amazon {
+  opacity: 0.7; }
+
+.row__inner-amazon:hover .tile-amazon:hover {
+  opacity: 1; }
 
 .popup {
   position: fixed;

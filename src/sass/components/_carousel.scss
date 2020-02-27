@@ -45,7 +45,7 @@
 			width: 90%;
 			margin: 1.5rem;
 			display: inline-block;
-			
+			border: none;
 			font-size: $default-font-size;
 			transition: all .2s;
 			position: relative;
@@ -55,14 +55,15 @@
 		}
 
 		&:hover {
-			background: linear-gradient(to bottom,#fff,#fff);
+			background: linear-gradient(to bottom, $color-primary-1, $color-primary-1);
+			border: none;
 			cursor: pointer;
 			box-shadow: 0 1rem 2rem rgba($color-black,.2);
 			transform: translate3d(0, -.2rem, 0);
 		}
 
 		&:active {
-			background: linear-gradient(to bottom,rgb(0,120,0),rgb(0, 102, 0));
+			background: linear-gradient(to bottom, $color-primary-3, $color-primary-3);
 			border: none;
 			transform: translate3d(0, .1rem, 0);
 			outline: none;
@@ -123,4 +124,13 @@
 	font-size: 20px;
 	transition: 450ms all;
 	transform-origin: left;
+}
+
+.row__inner-amazon:hover .tile-amazon {
+	opacity: 0.7;
+}
+
+.row__inner-amazon:hover .tile-amazon:hover {
+	// transform: scale(1.5);
+	opacity: 1;
 }
