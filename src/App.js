@@ -13,7 +13,7 @@ class App extends Component {
   render (){
     return (
     <div className="App">
-      <Nav main={true} />
+      
       <div className="header__logo-box">
           <div className="header__logo"></div>
       </div>

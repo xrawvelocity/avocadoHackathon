@@ -1,12 +1,12 @@
 .navigation {
     
 
-    &-animation {
+    
         & > *:not(:last-child) {
             animation: fadeIn 10s cubic-bezier(0.165, 0.84, 0.44, 1);
             animation-fill-mode: forwards;
         }
-    }
+    
 
     &__checkbox {
         display: none;

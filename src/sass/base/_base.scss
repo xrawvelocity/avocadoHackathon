@@ -26,6 +26,7 @@ body {
     box-sizing: border-box;
     scrollbar-color: $color-primary-2;
     scrollbar-width: thin;
+    overflow-x: hidden;
 }
 
 ::selection {

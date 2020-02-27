@@ -8,7 +8,6 @@ import AdBlockDetect from 'react-ad-block-detect';
 import uuid from 'uuid';
 import axios from 'axios';
 
-
 // YOUTUBE API KEYS
 let key = 'AIzaSyCL9rLbM01CmVdUgYZWFYUIqcYUsso7MDQ';
 let key2 = 'AIzaSyCRlttHdu2haccytjzgvKVCkNIXc_PWR5A';
@@ -33,7 +32,7 @@ export default class Home extends Component {
 
             //YOUTUBE API REQUEST
 
-            await fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=5&order=relevance&q=${item.value}&type=video&videoEmbeddable=true&key=${key}`)
+            await fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=5&order=relevance&q=${item.value}&type=video&videoEmbeddable=true&key=${key2}`)
             .then(res=>res.json())
             .then(async data=>{
                 await this.setState({
@@ -50,7 +49,7 @@ export default class Home extends Component {
             let r = await axios.get(`http://localhost:3000/scrapeAmazon?q=${item.value}`)
             
             console.log(r)
-            for(let i=4; i<9;i++){
+            for(let i=5; i<10;i++){
                 await this.state.amazonItems.push(r.data.amazonList[i])
             }
             console.log(this.state.amazonItems)
@@ -104,17 +103,23 @@ export default class Home extends Component {
         }        
     }
 
+
     showVideos = () => {
         console.log('show videos')
         return this.state.links.map(eachLink=> {
             return eachLink.items.map(eachVideo => {
                 return (
                     <div key={uuid.v4()} className="tile">
+                    
                         <div className="container">
 
                             <iframe width="540" height="330.625" title='test' src={`https://www.youtube.com/embed/${eachVideo.id.videoId}`} frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
 
-                            <button onClick={() => this.addToFavoriteVideos(eachVideo.id.videoId)} className="tile--yt__fav-btn">Add to Favorites</button>
+                            
+                            <button onClick={() => this.addToFavoriteVideos(eachVideo.id.videoId)} className="tile--yt__fav-btn">Add to Favorites
+                            </button>
+                            
+                            
 
                         </div>
                     </div>
@@ -126,13 +131,14 @@ export default class Home extends Component {
     showAmazon = () => {
         console.log('show amazon')
         return this.state.amazonItems.map(eachItem=> {
-            // if(eachItem.title !== '' || eachItem.title === 'gp'){
+            if(eachItem.title !== '' || eachItem.title === 'gp'){
                 return (
                     <div key={uuid.v4()} className="tile-amazon">
                         <AmazonItem title={eachItem.title} image={eachItem.img} link={`https://www.amazon.com/${eachItem.url}`} price={eachItem.price} addToFavoriteItems={this.addToFavoriteItems} home={true}/>
                     </div>
                 )           
-            // }
+            }
+            
         }) 
     }
     

@@ -45,9 +45,9 @@
 			width: 90%;
 			margin: 1.5rem;
 			display: inline-block;
-			border-radius: 1px;
+			
 			font-size: $default-font-size;
-			transition: all .1s;
+			transition: all .2s;
 			position: relative;
 			background: linear-gradient(to bottom,#f7f8fa,#e7e9ec);
 			box-shadow: 0 1px 0 rgba(255,255,255,.6) inset;
@@ -58,10 +58,13 @@
 			background: linear-gradient(to bottom,#fff,#fff);
 			cursor: pointer;
 			box-shadow: 0 1rem 2rem rgba($color-black,.2);
+			transform: translate3d(0, -.2rem, 0);
 		}
 
-		&:active,
-		&:focus {
+		&:active {
+			background: linear-gradient(to bottom,rgb(0,120,0),rgb(0, 102, 0));
+			border: none;
+			transform: translate3d(0, .1rem, 0);
 			outline: none;
 			box-shadow: 0 0.5rem 1rem rgba($color-black,.2);
 		}

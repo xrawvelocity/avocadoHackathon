@@ -36,12 +36,24 @@ export default class Favorites extends Component {
         }
     }
 
-    removeFromFavorites = (video) => {
-        let removeIndex = this.state.favoriteVideos.map(item=>item.value).indexOf(video);
-        console.log(removeIndex)
-        this.state.favoriteVideos.splice(removeIndex,1)
+    removeFromFavoriteVideos = async (video) => {
+        let copyFav = [...this.state.favoriteVideos]
+        let removeIndex = copyFav.map(item=>item.value).indexOf(video);
+        copyFav.splice(removeIndex,1)
+        await this.setState({
+            favoriteVideos: copyFav
+        })
         localStorage.setItem("favoriteVideos",JSON.stringify(this.state.favoriteVideos))
-        window.location.reload()
+    }
+
+    removeFromFavoriteItems = async (itemImg) => {
+        let copyFav = [...this.state.favoriteItems]
+        let removeIndex = copyFav.map(eachItem=>eachItem.value.image).indexOf(itemImg);
+        copyFav.splice(removeIndex,1)
+        await this.setState({
+            favoriteItems: copyFav
+        })
+        localStorage.setItem("favoriteItems",JSON.stringify(this.state.favoriteItems))
     }
 
     showVideos = () => {
@@ -53,7 +65,11 @@ export default class Favorites extends Component {
 
                         <iframe width="540" height="330.625" title='test' src={`https://www.youtube.com/embed/${eachVideo.value}`} frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
 
-                        <button onClick={() => this.removeFromFavorites(eachVideo.id.videoId)} className="tile--yt__fav-btn">Remove from Favorites</button>
+                        <button onClick={() => {
+                            this.removeFromFavoriteVideos(eachVideo.value)
+                            }
+                        }
+                        className="tile--yt__fav-btn">Remove from Favorites</button>
 
                     </div>
                 </div>
@@ -68,7 +84,7 @@ export default class Favorites extends Component {
             if(eachItem.value.title !== ''){
                 return (
                     <div key={uuid.v4()} className="tile-amazon">
-                        <AmazonItem title={eachItem.value.title} image={eachItem.value.image} link={`https://www.amazon.com/${eachItem.value.url}`} price={eachItem.value.price} removeFromFavorites={this.removeFromFavorites} home={false}/>
+                        <AmazonItem title={eachItem.value.title} image={eachItem.value.image} link={`https://www.amazon.com/${eachItem.value.url}`} price={eachItem.value.price} removeFromFavoriteItems={this.removeFromFavoriteItems} home={false}/>
                     </div>
                 )           
             }

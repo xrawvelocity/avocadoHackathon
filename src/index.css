@@ -38,7 +38,8 @@ html {
 body {
   box-sizing: border-box;
   scrollbar-color: #F79348;
-  scrollbar-width: thin; }
+  scrollbar-width: thin;
+  overflow-x: hidden; }
 
 ::selection {
   background-color: #FDAF37;
@@ -906,7 +907,7 @@ body {
   box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.2); }
   .amazon-item__img {
     object-fit: cover;
-    width: auto;
+    width: 100%;
     margin-top: 2rem; }
     .amazon-item__img--container {
       min-height: 250px; }
@@ -995,17 +996,20 @@ body {
     width: 90%;
     margin: 1.5rem;
     display: inline-block;
-    border-radius: 1px;
     font-size: 1.8rem;
-    transition: all .1s;
+    transition: all .2s;
     position: relative;
     background: linear-gradient(to bottom, #f7f8fa, #e7e9ec);
     box-shadow: 0 1px 0 rgba(255, 255, 255, 0.6) inset; }
   .tile--yt__fav-btn:hover {
     background: linear-gradient(to bottom, #fff, #fff);
     cursor: pointer;
-    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
-  .tile--yt__fav-btn:active, .tile--yt__fav-btn:focus {
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+    transform: translate3d(0, -0.2rem, 0); }
+  .tile--yt__fav-btn:active {
+    background: linear-gradient(to bottom, #007800, #006600);
+    border: none;
+    transform: translate3d(0, 0.1rem, 0);
     outline: none;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
 
@@ -1363,7 +1367,7 @@ body {
         width: 100%;
         float: none; } }
 
-.navigation-animation > *:not(:last-child) {
+.navigation > *:not(:last-child) {
   animation: fadeIn 10s cubic-bezier(0.165, 0.84, 0.44, 1);
   animation-fill-mode: forwards; }
 
