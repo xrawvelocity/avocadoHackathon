@@ -296,7 +296,10 @@ body {
       letter-spacing: 1rem; }
       @media only screen and (max-width: 37.5em) {
         .heading-primary-about--about {
-          letter-spacing: .5rem; } }
+          letter-spacing: .5rem;
+          width: 190%;
+          margin-left: -10rem;
+          font-size: 2.6rem; } }
 
 .heading-secondary {
   font-size: 3.5rem;
@@ -890,6 +893,30 @@ body {
     font-weight: 700; }
     .profile--button:hover, .profile--button:active, .profile--button:focus {
       background-color: #007800; }
+
+@media only screen and (max-width: 37.5em) {
+  .profile {
+    overflow: hidden; }
+  .profile--form__input {
+    width: 30rem; }
+  .profile--form__button {
+    margin: 40px 0;
+    width: 50%; }
+  .profile--form {
+    top: 47%; }
+  .profile--list__ul {
+    width: 20rem;
+    height: 24rem; }
+  .profile--list {
+    top: 68%; }
+  .profile--button {
+    margin: 85px 0 40px 0;
+    padding: .5rem;
+    font-size: 1.8rem;
+    width: 40%; }
+  .profile--heading__text {
+    top: 24%;
+    width: 100%; } }
 
 .amazon-item {
   display: flex;

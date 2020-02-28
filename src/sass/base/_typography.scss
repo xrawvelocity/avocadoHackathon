@@ -82,6 +82,9 @@ body {
             
             @include respond(phone){
                 letter-spacing: .5rem;
+                width: 190%;
+                margin-left: -10rem;
+                font-size: 2.6rem;
             }
         }
     }
