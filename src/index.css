@@ -1475,6 +1475,24 @@ body {
   @media only screen and (max-width: 56.25em) {
     .footer {
       padding: 8rem 0; } }
+  .footer--link {
+    display: flex;
+    justify-content: center;
+    margin-bottom: -3rem; }
+    .footer--link > * {
+      padding: 2rem 1rem 0; }
+    .footer--link__github {
+      color: #ccc; }
+      .footer--link__github:hover {
+        color: #fff; }
+      .footer--link__github .fab {
+        font-size: 3rem; }
+    .footer--link__linkedin {
+      color: #23f; }
+      .footer--link__linkedin:hover {
+        color: #15f; }
+      .footer--link__linkedin .fab {
+        font-size: 3rem; }
   .footer__logo-box {
     text-align: center;
     margin-bottom: 4rem; }

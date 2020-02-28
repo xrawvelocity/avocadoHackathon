@@ -32,7 +32,7 @@ export default class Home extends Component {
 
             //YOUTUBE API REQUEST
 
-            await fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=5&order=relevance&q=${item.value}&type=video&videoEmbeddable=true&key=${key3}`)
+            await fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=5&order=relevance&q=${item.value}&type=video&videoEmbeddable=true&key=${key2}`)
             .then(res=>res.json())
             .then(async data=>{
                 await this.setState({

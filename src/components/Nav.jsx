@@ -21,11 +21,10 @@ export default class Nav extends Component {
 
             <nav className="navigation__nav">
                 <ul className="navigation__list">
-                    <li onClick={this.hideNav} className="navigation__item"><Link to="/profile" className="navigation__link">Profile</Link></li>
                     <li onClick={this.hideNav} className="navigation__item"><Link to="/home" className="navigation__link">Home</Link></li>
+                    <li onClick={this.hideNav} className="navigation__item"><Link to="/profile" className="navigation__link">Profile</Link></li>
                     <li onClick={this.hideNav} className="navigation__item"><Link to="/favorites" className="navigation__link">Favorites</Link></li>
-                    <li onClick={this.hideNav} className="navigation__item"><Link to="/" className="navigation__link">Start</Link></li>
-                    <li onClick={this.hideNav} className="navigation__item"><Link to="/" className="navigation__link">Contact</Link></li>
+                    
                 </ul>
             </nav>
             </div>
@@ -42,11 +41,10 @@ export default class Nav extends Component {
 
             <nav className="navigation__nav">
                 <ul className="navigation__list">
-                    <li onClick={this.hideNav} className="navigation__item"><Link to="/profile" className="navigation__link">Profile</Link></li>
                     <li onClick={this.hideNav} className="navigation__item"><Link to="/home" className="navigation__link">Home</Link></li>
+                    <li onClick={this.hideNav} className="navigation__item"><Link to="/profile" className="navigation__link">Profile</Link></li>
                     <li onClick={this.hideNav} className="navigation__item"><Link to="/favorites" className="navigation__link">Favorites</Link></li>
-                    <li onClick={this.hideNav} className="navigation__item"><Link to="/" className="navigation__link">Start</Link></li>
-                    <li onClick={this.hideNav} className="navigation__item"><Link to="/" className="navigation__link">Contact</Link></li>
+                    
                 </ul>
             </nav>
             </div>

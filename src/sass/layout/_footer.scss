@@ -7,6 +7,39 @@
     @include respond(tab-port){
         padding: 8rem 0;
     }
+
+
+    &--link {
+
+        display: flex;
+        justify-content: center;
+        margin-bottom: -3rem;
+
+        & > * {
+            padding: 2rem 1rem 0;
+
+        }
+        
+        &__github {
+            color:#ccc;
+            &:hover{
+                color:#fff;
+            }
+            & .fab {
+                font-size: 3rem;
+            }
+        }
+
+        &__linkedin {
+            color: #23f;
+            &:hover{
+                color:#15f;
+            }
+            & .fab {
+                font-size: 3rem;
+            }
+        }
+    }
     
 
     &__logo-box {
