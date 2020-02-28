@@ -22,6 +22,8 @@
 .container {
 	display: flex;
 	flex-direction: column;
+	width: 100%;
+	height: 100%;
 }
 
 .tile {
@@ -47,7 +49,7 @@
 			display: inline-block;
 			border: none;
 			font-size: $default-font-size;
-			transition: all .2s;
+			transition: all .2s ease-in-out;
 			position: relative;
 			background: linear-gradient(to bottom,#f7f8fa,#e7e9ec);
 			box-shadow: 0 1px 0 rgba(255,255,255,.6) inset;
@@ -69,7 +71,54 @@
 			outline: none;
 			box-shadow: 0 0.5rem 1rem rgba($color-black,.2);
 		}
+
+		&__success {
+			color: #16a31d;
+			opacity: 0;
+			margin: 0 -1rem 0 1rem
+		}
+
+		&:focus &__success {
+			animation: favSuccess 2s ease-in-out
+		}
+
+		&__remove {
+			color: #fd161d90;
+			opacity: 0;
+			margin: 0 -1rem 0 1rem
+		}
+
+		&:focus &__remove {
+			animation: favRemove 2s ease-in-out
+		}
 	}
+}
+
+@keyframes favSuccess {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+@keyframes favRemove {
+    0% {
+        opacity: 0;
+    }
+
+    30% {
+        opacity: 1
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 // .row__inner:hover {
@@ -133,4 +182,70 @@
 .row__inner-amazon:hover .tile-amazon:hover {
 	// transform: scale(1.5);
 	opacity: 1;
+}
+
+
+
+@media only screen and (max-width: 75em){ //1200px
+	.row--youtube {
+		max-width: 90rem;
+	}
+	.tile {
+		width: 400px;
+		height: 280px;
+
+		&--yt__fav-btn{
+			margin-left: 2.5rem;
+		}
+	}
+
+	.row--amazon {
+		max-width: 90rem;
+	}
+	.tile-amazon {
+		width: 450px;
+		height: 240.625px;
+	}
+}
+
+@media only screen and (max-width: 56.25em){ //900px
+	.row--youtube {
+		max-width: 70rem;
+	}
+	.tile {
+		width: 300px;
+		height: 210px;
+	}
+
+	.row--amazon {
+		max-width: 70rem;
+	}
+	.tile-amazon {
+		width: 130px;
+		height: 500px;
+	}
+}
+
+@media only screen and (max-width: 37.5em){ //600px
+	.row--youtube {
+		max-width: 45rem;
+	}
+	.row__inner {
+		padding: 0;
+	}
+	.tile {
+		width: 300px;
+		height: 210px;
+	}
+
+	.row--amazon {
+		max-width: 45rem;
+	}
+	.row__inner-amazon {
+		padding: 0;
+	}
+	.tile-amazon {
+		width: 150px;
+		height: 400px;
+	}
 }

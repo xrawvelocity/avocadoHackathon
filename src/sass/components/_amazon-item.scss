@@ -100,13 +100,23 @@
             }
 
             &__success {
-                
+                color: #16a31d;
                 opacity: 0;
                 margin: 0 -1rem 0 1rem
             }
 
             &:focus &__success {
-                animation: favSuccess 2.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+                animation: favSuccess 2s ease-in-out
+            }
+
+            &__remove {
+                color: #fd161d90;
+                opacity: 0;
+                margin: 0 -1rem 0 1rem
+            }
+
+            &:focus &__remove {
+                animation: favRemove 2s ease-in-out
             }
         }
     }
@@ -123,5 +133,33 @@
 
     100% {
         opacity: 0;
+    }
+}
+@keyframes favRemove {
+    0% {
+        opacity: 0;
+    }
+
+    30% {
+        opacity: 1
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@media only screen and (max-width: 75em){ //1200px
+	
+}
+
+@media only screen and (max-width: 56.25em){ //900px
+	
+}
+
+@media only screen and (max-width: 37.5em){ //600px
+	.amazon-item {
+        height: 250px;
+        width: 200px;
     }
 }

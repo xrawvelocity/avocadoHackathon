@@ -52,3 +52,18 @@
         animation-fill-mode: forwards;
     }
 }
+
+@media only screen and (max-width: 75em){ //1200px
+	
+}
+
+@media only screen and (max-width: 56.25em){ //900px
+	
+}
+
+@media only screen and (max-width: 37.5em){ //600px
+	.header__logo-box {
+        padding-top: 2rem;
+        padding-left: 4rem;
+    }
+}

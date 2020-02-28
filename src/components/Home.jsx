@@ -46,11 +46,18 @@ export default class Home extends Component {
             //CUSTOM API WEB SCRAPING AMAZON
             //pending heroku deployment
             console.log(item.value)
-            let r = await axios.get(`https://dry-retreat-09106.herokuapp.com/scrapeAmazon?q=${item.value}`).catch(err => console.error(err))
+            
+            
+            let r = await axios.get(`https://shrouded-mountain-42240.herokuapp.com/scrapeAmazon?q=${item.value}`).catch(err => console.error(err))
             
             console.log(r)
-            for(let i=5; i<10;i++){
-                await this.state.amazonItems.push(r.data.amazonList[i])
+
+            //let num = Math.random() * r.data.amazonList.length;
+            for(let i=4; i<9;i++){
+                // console.log(r.data.amazonList[i])
+                if(r.data.amazonList[i]){
+                    await this.state.amazonItems.push(r.data.amazonList[i])
+                }
             }
             console.log(this.state.amazonItems)
 
@@ -113,10 +120,10 @@ export default class Home extends Component {
                     
                         <div className="container">
 
-                            <iframe width="540" height="330.625" title='test' src={`https://www.youtube.com/embed/${eachVideo.id.videoId}`} frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                            <iframe width="100%" height="100%" title='test' src={`https://www.youtube.com/embed/${eachVideo.id.videoId}`} frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
 
                             
-                            <button onClick={() => this.addToFavoriteVideos(eachVideo.id.videoId)} className="tile--yt__fav-btn">Add to Favorites
+                            <button onClick={() => this.addToFavoriteVideos(eachVideo.id.videoId)} className="tile--yt__fav-btn">Add to Favorites <i className="fas fa-check tile--yt__fav-btn__success"></i>
                             </button>
                             
                             

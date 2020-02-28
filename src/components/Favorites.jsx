@@ -63,13 +63,13 @@ export default class Favorites extends Component {
                 <div key={uuid.v4()} className="tile">
                     <div className="container">
 
-                        <iframe width="540" height="330.625" title='test' src={`https://www.youtube.com/embed/${eachVideo.value}`} frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                        <iframe width="100%" height="100%" title='test' src={`https://www.youtube.com/embed/${eachVideo.value}`} frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
 
                         <button onClick={() => {
                             this.removeFromFavoriteVideos(eachVideo.value)
                             }
                         }
-                        className="tile--yt__fav-btn">Remove from Favorites</button>
+                        className="tile--yt__fav-btn">Remove<i class="fas fa-times-circle tile--yt__fav-btn__remove"></i></button>
 
                     </div>
                 </div>

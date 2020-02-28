@@ -37,13 +37,13 @@ export default class AmazonItem extends Component {
                             price:this.props.price,
                             link:this.props.link
                         })}
-                        className="amazon-item__btn-fav">Add to Favorites <span className="amazon-item__btn-fav__success">*</span></button>:
+                        className="amazon-item__btn-fav">Add to Favorites <i className="fas fa-check amazon-item__btn-fav__success"></i></button>:
                         <button onClick={() => {
                             console.log(this.props.image);
                             this.props.removeFromFavoriteItems(this.props.image)
                             }
                         }
-                        className="amazon-item__btn-fav">Remove from Favorites  <span className="amazon-item__btn-fav__success">X</span></button>
+                        className="amazon-item__btn-fav"><span> </span>Remove<i class="fas fa-times-circle amazon-item__btn-fav__remove"></i></button>
                         }
                     </div>
                 </div>

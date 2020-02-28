@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Switch, Route } from 'react-router-dom'
 import './App.css';
-import Nav from './components/Nav';
 import Header from './components/Header';
 import Profile from './components/Profile';
 import Home from './components/Home';
