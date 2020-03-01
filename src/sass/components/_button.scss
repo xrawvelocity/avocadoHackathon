@@ -87,14 +87,20 @@
         }
     }
 
-    &__btn-add {
-
-    }
-
     &__btn-home {
         position: absolute;
         top: 82%;
         left: 42%;
         
     }
+}
+
+@media only screen and (max-width: 37.5em){ //600px
+
+    .btn-profile__btn-home {
+        position: relative;
+        top: 1250%;
+        left: 0;
+    }
+    
 }

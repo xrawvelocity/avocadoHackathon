@@ -438,6 +438,12 @@ body {
   top: 82%;
   left: 42%; }
 
+@media only screen and (max-width: 37.5em) {
+  .btn-profile__btn-home {
+    position: relative;
+    top: 1250%;
+    left: 0; } }
+
 .card {
   perspective: 100rem;
   -moz-perspective: 100rem;
@@ -948,9 +954,9 @@ body {
     top: 47%; }
   .profile--list__ul {
     width: 20rem;
-    height: 24rem; }
+    height: auto; }
   .profile--list {
-    top: 68%; }
+    top: 67%; }
   .profile--button {
     margin: 85px 0 40px 0;
     padding: .5rem;
