@@ -392,27 +392,51 @@ body {
   transform: translateY(-0.1rem);
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
 
-.btn-home__log-in, .btn-home__sign-up {
+.btn-home__btn, .btn-home__btn-add, .btn-home__btn-home,
+.btn-profile__btn,
+.btn-profile__btn-add,
+.btn-profile__btn-home {
   margin: 2rem;
   border: none; }
-  .btn-home__log-in, .btn-home__log-in:link, .btn-home__log-in:visited, .btn-home__sign-up, .btn-home__sign-up:link, .btn-home__sign-up:visited {
+  .btn-home__btn, .btn-home__btn:link, .btn-home__btn:visited, .btn-home__btn-add, .btn-home__btn-add:link, .btn-home__btn-add:visited, .btn-home__btn-home, .btn-home__btn-home:link, .btn-home__btn-home:visited,
+  .btn-profile__btn,
+  .btn-profile__btn:link,
+  .btn-profile__btn:visited,
+  .btn-profile__btn-add,
+  .btn-profile__btn-add:link,
+  .btn-profile__btn-add:visited,
+  .btn-profile__btn-home,
+  .btn-profile__btn-home:link,
+  .btn-profile__btn-home:visited {
     text-transform: uppercase;
     text-decoration: none;
     padding: 1.5rem 4rem;
     display: inline-block;
-    border-radius: 10rem;
+    border-radius: 0rem;
     font-size: 1.8rem;
-    transition: all .1s;
+    transition: all .2s;
     position: relative;
     color: #101B3B; }
-  .btn-home__log-in:hover, .btn-home__sign-up:hover {
+  .btn-home__btn:hover, .btn-home__btn-add:hover, .btn-home__btn-home:hover,
+  .btn-profile__btn:hover,
+  .btn-profile__btn-add:hover,
+  .btn-profile__btn-home:hover {
     transform: translateY(-0.3rem);
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
     background-color: #FDAF37; }
-  .btn-home__log-in:active, .btn-home__log-in:focus, .btn-home__sign-up:active, .btn-home__sign-up:focus {
+  .btn-home__btn:active, .btn-home__btn-add:active, .btn-home__btn-home:active,
+  .btn-profile__btn:active,
+  .btn-profile__btn-add:active,
+  .btn-profile__btn-home:active {
     outline: none;
-    transform: translateY(-0.1rem);
+    transform: translateY(0.1rem);
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
+
+.btn-home__btn-home,
+.btn-profile__btn-home {
+  position: absolute;
+  top: 82%;
+  left: 42%; }
 
 .card {
   perspective: 100rem;
@@ -780,7 +804,7 @@ body {
   overflow-x: hidden;
   background-color: rgba(34, 34, 34, 0.9); }
   .home--intro__quote {
-    background-image: linear-gradient(to bottom, rgba(5, 6, 8, 0.001) 0%, rgba(5, 6, 8, 0.25) 10%, rgba(5, 6, 8, 0.5) 80%, #050608 100%);
+    background-image: linear-gradient(to bottom, rgba(40, 40, 40, 0.001) 0%, rgba(40, 40, 40, 0.25) 10%, rgba(40, 40, 40, 0.5) 80%, #282828 100%);
     height: 70vh;
     display: flex;
     justify-content: center;
@@ -788,8 +812,8 @@ body {
   .home--main__youtube {
     padding-top: 20rem;
     height: 100vh;
-    background-color: #050608;
-    background-image: linear-gradient(to bottom, rgba(5, 6, 8, 0.2) 0%, rgba(40, 40, 40, 0.3) 10%, rgba(40, 40, 40, 0.75) 20%, #282828 100%);
+    background-color: #282828;
+    background-image: linear-gradient(to bottom, rgba(40, 40, 40, 0.2) 0%, rgba(40, 40, 40, 0.3) 10%, rgba(40, 40, 40, 0.75) 20%, #282828 100%);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -805,7 +829,7 @@ body {
   .home--main__amazon {
     padding-top: 15rem;
     height: 120vh;
-    background-color: #050608;
+    background-color: #282828;
     background-image: linear-gradient(to bottom, #282828 0%, rgba(204, 204, 204, 0.75) 20%, #eeeeee 100%); }
     .home--main__amazon--img {
       height: 100px;
@@ -827,7 +851,10 @@ body {
 
 .profile {
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(34, 34, 34, 0.9); }
   .profile--heading__text {
     font-size: 4rem;
     font-weight: 400;
@@ -846,11 +873,10 @@ body {
     left: 50%;
     transform: translate(-50%, -70%); }
     .profile--form__input {
-      width: 50rem;
-      padding: 1rem 4rem;
+      width: 30rem;
+      padding: 1rem 2rem;
       font-size: 2rem;
       border: none;
-      border-radius: 2rem;
       background-color: #ccc;
       transition: all .2s; }
       .profile--form__input:hover, .profile--form__input:active, .profile--form__input:focus {
@@ -869,20 +895,21 @@ body {
         background-color: #007800; }
   .profile--list {
     position: absolute;
-    top: 65%;
+    top: 63%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgba(5, 6, 8, 0.7);
-    padding: 3rem 5rem;
-    border-radius: 20px; }
+    padding: 1.8rem 5rem;
+    text-transform: uppercase; }
     .profile--list__ul {
       list-style: none;
-      width: 50rem;
-      height: 20rem; }
+      width: 30rem;
+      height: auto; }
     .profile--list__container {
-      margin: 1.5rem;
+      padding: 1.5rem 5rem;
       display: flex;
-      justify-content: center; }
+      justify-content: space-between; }
+      .profile--list__container:not(:last-child) {
+        border-bottom: 1px solid #ddd; }
     .profile--list__item {
       color: #fff;
       font-size: 1.8rem;
@@ -1435,7 +1462,7 @@ body {
   .youtube-fav--img {
     height: 60px;
     width: auto;
-    margin: -4rem 0 4rem 0; }
+    margin: 0 0 4rem 0; }
   .youtube-fav--grid {
     margin: 10rem 2rem 20rem;
     width: 100%;
@@ -1521,60 +1548,59 @@ body {
     margin: 10rem auto 0; }
 
 @media only screen and (max-width: 37.5em) {
-  .amazon-fav--video {
-    height: 180px;
-    width: 300px; }
   .amazon-fav--grid {
     margin: 5rem 2px;
-    width: auto; } }
+    width: auto; }
+  .amazon-fav--item {
+    width: 200px;
+    height: 250px; } }
 
-.header__logo-box {
-  position: relative;
-  padding-top: 4rem;
-  padding-left: 6rem; }
-
-.header__logo {
-  background-image: url(./logo/sanspicTextNoBG.svg);
-  background-repeat: no-repeat;
-  background-size: contain;
-  height: 12rem;
-  width: 12rem;
-  animation: fadeIn 10s cubic-bezier(0.165, 0.84, 0.44, 1);
-  animation-fill-mode: forwards; }
-
-.header__logo-box-text {
-  display: flex;
-  justify-content: center;
-  margin-left: 3rem;
-  animation: moveInBottom 5s cubic-bezier(0.165, 0.84, 0.44, 1);
-  animation-fill-mode: forwards; }
-
-.header__logo-text {
-  background-image: url(./logo/liveStyleLogoText.png);
-  background-repeat: no-repeat;
-  background-size: contain;
-  height: 15rem;
-  width: 30rem;
-  animation: moveInBottom 5s cubic-bezier(0.165, 0.84, 0.44, 1);
-  animation-fill-mode: forwards; }
-
-.header__text-box {
-  text-align: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  animation: fadeOut 6s cubic-bezier(0.165, 0.84, 0.44, 1);
-  animation-fill-mode: forwards; }
-
-.header__text-box-about {
-  text-align: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  animation: fadeIn 10s cubic-bezier(0.165, 0.84, 0.44, 1);
-  animation-fill-mode: forwards; }
+.header {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(34, 34, 34, 0.9); }
+  .header__logo-box {
+    position: relative;
+    padding-top: 4rem;
+    padding-left: 6rem; }
+  .header__logo {
+    background-image: url(./logo/sanspicTextNoBG.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 12rem;
+    width: 12rem;
+    animation: fadeIn 10s cubic-bezier(0.165, 0.84, 0.44, 1);
+    animation-fill-mode: forwards; }
+  .header__logo-box-text {
+    display: flex;
+    justify-content: center;
+    margin-left: 3rem;
+    animation: moveInBottom 5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    animation-fill-mode: forwards; }
+  .header__logo-text {
+    background-image: url(./logo/liveStyleLogoText.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 15rem;
+    width: 30rem;
+    animation: moveInBottom 5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    animation-fill-mode: forwards; }
+  .header__text-box {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: fadeOut 6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    animation-fill-mode: forwards; }
+  .header__text-box-about {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: fadeIn 10s cubic-bezier(0.165, 0.84, 0.44, 1);
+    animation-fill-mode: forwards; }
 
 @media only screen and (max-width: 37.5em) {
   .header__logo-box {
@@ -1632,9 +1658,9 @@ body {
   .footer--link {
     display: flex;
     justify-content: center;
-    margin-bottom: -3rem; }
+    margin-bottom: -1rem; }
     .footer--link > * {
-      padding: 2rem 2rem 0; }
+      padding: 2rem; }
     .footer--link__github {
       color: #ccc; }
       .footer--link__github:hover {

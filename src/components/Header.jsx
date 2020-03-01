@@ -7,7 +7,7 @@ export default class Header extends Component {
         return (
         <header className="header">
 
-            <BGvid />
+            <BGvid fav={true}/>
 
             <div className="header__text-box-about">
 
@@ -18,7 +18,7 @@ export default class Header extends Component {
                 <div className="btn-home">
                     {/* <Link to="/login"><button className="btn-home__log-in">Log in</button></Link>
                     <Link to="/signup"><button className="btn-home__sign-up">Sign up</button></Link> */}
-                    <Link to="/profile"><button className="btn-home__sign-up">Edit your LiveStyle</button></Link>
+                    <Link to="/profile"><button className="btn-home__btn">Edit your LiveStyle</button></Link>
                 </div>
 
             </div>

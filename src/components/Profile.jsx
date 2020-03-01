@@ -36,16 +36,21 @@ export default class Profile extends Component {
             value:this.input.current.value,
         };
 
-        if(localStorage.getItem('list')==null){
+        if(localStorage.getItem('list')==null) {
             const list=[]
             list.push(Items);
             localStorage.setItem("list",JSON.stringify(list))
         }
 
-        else {
+        else if(JSON.parse(localStorage.getItem('list')).length < 5) {
+            console.log(JSON.parse(localStorage.getItem('list')).length)
             const list=JSON.parse(localStorage.getItem('list'))
             list.push(Items)
             localStorage.setItem("list",JSON.stringify(list))
+        }
+
+        else if(localStorage.getItem('list').length > 6){
+            alert("You can only have 5 categories at once.")
         }
 
         this.setState({
@@ -89,8 +94,8 @@ export default class Profile extends Component {
                 <h1 className="profile--heading__text">Pick your LiveStyle</h1>
             </div>
             <div className="profile--form">
-                <input className="profile--form__input"  ref={this.input} type="text"/>
-                <button className="profile--form__button" onClick={this.addItem}>
+                <input className="profile--form__input"  ref={this.input} placeholder="ex. gym, coding, etc." type="text"/>
+                <button className="btn-profile__btn-add" onClick={this.addItem}>
                 <span>ADD</span>
                 </button>
             </div>
@@ -106,7 +111,7 @@ export default class Profile extends Component {
                 </ul>
             </div>
             <div>
-            <Link to="/home"><button onClick={this.test} className="profile--button">Country Roads</button></Link>
+            <Link to="/home"><button onClick={this.test} className="btn-profile__btn-home">VIEW LIVESTYLE</button></Link>
             
             </div>
             

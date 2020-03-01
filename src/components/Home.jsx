@@ -33,7 +33,7 @@ export default class Home extends Component {
 
             //YOUTUBE API REQUEST
 
-            await fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=5&order=relevance&q=${item.value}&type=video&videoEmbeddable=true&key=${key2}`)
+            await fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=5&order=relevance&q=${item.value}&type=video&videoEmbeddable=true&key=${key3}`)
             .then(res=>res.json())
             .then(async data=>{
                 await this.setState({
@@ -53,7 +53,7 @@ export default class Home extends Component {
             
             console.log(r)
 
-            let num = Math.floor(Math.random() * r.data.amazonList.length);
+            let num = Math.floor(Math.random() * (r.data.amazonList.length - 5));
             console.log(num)
             for(let i=(num+4); i<(num+9);i++){
                 console.log(r.data.amazonList[i])
@@ -172,15 +172,17 @@ export default class Home extends Component {
                     <section className="home--intro__quote">
                         <h1 className="heading-primary--quote">Live Life Your Way.</h1>
                     </section>
+                    <a href="#yt">
                     <div className="arrow">
                         <span></span>
                         <span></span>
                         <span></span>
                     </div>
+                    </a>
                 </div>
                 
                 <div className="home--main">
-                    <section className="home--main__youtube">
+                    <section id="yt" className="home--main__youtube">
 
                         <a href="http://www.youtube.com">
                             <img className="home--main__youtube--img" alt="YT logo" src="./images/yt_logo_rgb_dark.png"/>

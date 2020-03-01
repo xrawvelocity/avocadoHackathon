@@ -81,16 +81,18 @@ export default class AmazonFavorites extends Component {
                     <section className="amazon-fav--intro__quote">
                         <h1 className="amazon-fav--quote">Amazon Favorites</h1>
                     </section>
+                    <a href="#amaz">
                     <div className="arrow">
                         <span></span>
                         <span></span>
                         <span></span>
                     </div>
+                    </a>
                 </div>
                 
                 <div>
                     
-                    <section className="amazon-fav--main">
+                    <section id="amaz" className="amazon-fav--main">
                         
                         <a href="http://www.amazon.com">
                             <img className="amazon-fav--img" alt="Amazon logo" src="./images/amazon_logo-white.png"/>

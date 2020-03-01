@@ -85,15 +85,17 @@ export default class YoutubeFavorites extends Component {
                     <section className="youtube-fav--intro__quote">
                         <h1 className="youtube-fav--quote">Youtube Favorites</h1>
                     </section>
+                    <a href="#yt">
                     <div className="arrow">
                         <span></span>
                         <span></span>
                         <span></span>
                     </div>
+                    </a>
                 </div>
                 
                 <div>
-                    <section className="youtube-fav--main">
+                    <section id="yt" className="youtube-fav--main">
 
                         <a href="http://www.youtube.com">
                             <img className="youtube-fav--img" alt="YT logo" src="./images/yt_logo_rgb_dark.png"/>

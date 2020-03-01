@@ -50,10 +50,12 @@
     }
 }
 
-.btn-home {
+.btn-home,
+.btn-profile {
 
-    &__log-in,
-    &__sign-up {
+    &__btn,
+    &__btn-add,
+    &__btn-home {
 
         margin:2rem;
         border: none;
@@ -65,9 +67,9 @@
             text-decoration: none;
             padding: 1.5rem 4rem;
             display: inline-block;
-            border-radius: 10rem;
+            border-radius: 0rem;
             font-size: $default-font-size;
-            transition: all .1s;
+            transition: all .2s;
             position: relative;
             color: $color-navy-1;
         }
@@ -78,11 +80,21 @@
             background-color: $color-primary-1;
         }
 
-        &:active,
-        &:focus {
+        &:active {
             outline: none;
-            transform: translateY(-0.1rem);
+            transform: translateY(.1rem);
             box-shadow: 0 0.5rem 1rem rgba($color-black,.2);
         }
+    }
+
+    &__btn-add {
+
+    }
+
+    &__btn-home {
+        position: absolute;
+        top: 82%;
+        left: 42%;
+        
     }
 }
