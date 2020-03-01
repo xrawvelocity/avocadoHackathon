@@ -1495,7 +1495,7 @@ body {
     margin: 5rem 2px;
     width: auto; }
   .youtube-fav--img {
-    height: 40px; }
+    height: 50px; }
   .youtube-fav {
     overflow-x: hidden; } }
 
@@ -1566,7 +1566,9 @@ body {
     width: auto; }
   .amazon-fav--item {
     width: 200px;
-    height: 450px; } }
+    height: 450px; }
+  .amazon-fav--img {
+    height: 80px; } }
 
 .header {
   width: 100%;
