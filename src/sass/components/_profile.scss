@@ -2,8 +2,8 @@
 
     display: flex;
     flex-direction: column;
-    height: 100%;
-    width: 100%;
+    height: 100vh;
+    width: 100vw;
     background-color: rgba(34, 34, 34, 0.9);
 
     &--heading {
@@ -142,6 +142,8 @@
 @media only screen and (max-width: 37.5em){ //600px
     .profile {
         overflow-x: hidden;
+        width: 100vw;
+        height: 100vh;
         
         &--form__input {
             width: 30rem;
@@ -157,7 +159,7 @@
         }
             
         &--list__ul {
-            width: 20rem;
+            width: 25rem;
             height: auto;
         }
             
@@ -173,6 +175,7 @@
         }
             
         &--heading__text {
+            font-size: 3rem;
             top: 24%;
             width: 100%;
         }
