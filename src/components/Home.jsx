@@ -13,6 +13,7 @@ import axios from 'axios';
 let key = 'AIzaSyCL9rLbM01CmVdUgYZWFYUIqcYUsso7MDQ';
 let key2 = 'AIzaSyCRlttHdu2haccytjzgvKVCkNIXc_PWR5A';
 let key3 = 'AIzaSyCzEMTvE1OqDWQA3vkvsUev4WO9nQDMh6g';
+let key4 = 'AIzaSyCM2mLL21gJ3mWb2ETYFVKwHbTdBQ_94zY';
 
 export default class Home extends Component {
 
@@ -35,7 +36,7 @@ export default class Home extends Component {
 
             //YOUTUBE API REQUEST
 
-            await fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=5&order=relevance&q=${item.value}&type=video&videoEmbeddable=true&key=${key3}`)
+            await fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=5&order=relevance&q=${item.value}&type=video&videoEmbeddable=true&key=${key4}`)
             .then(res=>res.json())
             .then(async data=>{
                 await this.setState({
