@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import BGvid from './BGvid';
 import Footer from './Footer';
 import AmazonItem from './AmazonItem';
@@ -13,6 +14,7 @@ export default class AmazonFavorites extends Component {
     }
 
     componentDidMount(){
+        window.scrollTo(0,0);
         if(localStorage.getItem('favoriteItems')){
             this.setState({
                 favoriteItems:JSON.parse(localStorage.getItem('favoriteItems')),
@@ -27,6 +29,7 @@ export default class AmazonFavorites extends Component {
         }
     }
 
+    
     removeFromFavoriteItems = async (itemImg) => {
         let copyFav = [...this.state.favoriteItems]
         let removeIndex = copyFav.map(eachItem=>eachItem.value.image).indexOf(itemImg);
@@ -74,7 +77,7 @@ export default class AmazonFavorites extends Component {
             <main className="amazon-fav">
                 <Nav main={false} />
                 <div className="amazon-fav__logo-box">
-                    <div className="amazon-fav__logo"></div>
+                    <Link to="/"><div className="header__logo"></div></Link>
                 </div>
                 <div className="amazon-fav--intro">
                     <BGvid fav={true}/>

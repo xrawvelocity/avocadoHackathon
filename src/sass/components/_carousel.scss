@@ -75,7 +75,7 @@
 		&__success {
 			color: #16a31d;
 			opacity: 0;
-			margin: 0 -1rem 0 1rem
+			margin: 0 -3rem 0 1rem
 		}
 
 		&:focus &__success {
@@ -195,7 +195,7 @@
 		height: 280px;
 
 		&--yt__fav-btn{
-			margin-left: 2.5rem;
+			margin-left: 1.75rem;
 		}
 	}
 
@@ -234,8 +234,8 @@
 		padding: 0;
 	}
 	.tile {
-		width: 300px;
-		height: 210px;
+		width: 250px;
+		height: 215px;
 	}
 
 	.row--amazon {

@@ -88,6 +88,9 @@ export default class Profile extends Component {
     render(){
         return (
         <div className="profile">
+            <div className="header__logo-box">
+                <Link to="/"><div className="header__logo"></div></Link>
+            </div> 
             <Nav main={false} />
             <BGvid />
             <div className="profile--heading">

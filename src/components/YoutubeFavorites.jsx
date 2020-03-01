@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import BGvid from './BGvid';
 import Footer from './Footer';
 import Nav from './Nav';
@@ -11,6 +12,7 @@ export default class YoutubeFavorites extends Component {
     }
 
     componentDidMount(){
+        window.scrollTo(0,0);
         if(localStorage.getItem('favoriteVideos')){
             this.setState({
                 favoriteVideos:JSON.parse(localStorage.getItem('favoriteVideos')),
@@ -78,7 +80,7 @@ export default class YoutubeFavorites extends Component {
             <main className="youtube-fav">
                 <Nav main={false} />
                 <div className="youtube-fav__logo-box">
-                    <div className="youtube-fav__logo"></div>
+                    <Link to="/"><div className="header__logo"></div></Link>
                 </div>    
                 <div className="youtube-fav--intro">
                     <BGvid fav={true}/>

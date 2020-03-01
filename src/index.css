@@ -298,8 +298,8 @@ body {
       @media only screen and (max-width: 37.5em) {
         .heading-primary-about--about {
           letter-spacing: .5rem;
-          width: 190%;
-          margin-left: -10rem;
+          width: 80vw;
+          text-align: center;
           font-size: 2.6rem; } }
 
 .heading-secondary {
@@ -441,7 +441,7 @@ body {
 @media only screen and (max-width: 37.5em) {
   .btn-profile__btn-home {
     position: relative;
-    top: 860%;
+    top: 700%;
     left: 0; } }
 
 .card {
@@ -1132,7 +1132,7 @@ body {
   .tile--yt__fav-btn__success {
     color: #16a31d;
     opacity: 0;
-    margin: 0 -1rem 0 1rem; }
+    margin: 0 -3rem 0 1rem; }
   .tile--yt__fav-btn:focus .tile--yt__fav-btn__success {
     animation: favSuccess 2s ease-in-out; }
   .tile--yt__fav-btn__remove {
@@ -1207,7 +1207,7 @@ body {
     width: 400px;
     height: 280px; }
     .tile--yt__fav-btn {
-      margin-left: 2.5rem; }
+      margin-left: 1.75rem; }
   .row--amazon {
     max-width: 90rem; }
   .tile-amazon {
@@ -1232,8 +1232,8 @@ body {
   .row__inner {
     padding: 0; }
   .tile {
-    width: 300px;
-    height: 210px; }
+    width: 250px;
+    height: 215px; }
   .row--amazon {
     max-width: 45rem; }
   .row__inner-amazon {

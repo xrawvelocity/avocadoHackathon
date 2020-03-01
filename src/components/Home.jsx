@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/no-distracting-elements */
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import BGvid from './BGvid';
 import Footer from './Footer';
 import Nav from './Nav';
@@ -25,6 +26,7 @@ export default class Home extends Component {
 
     async componentDidMount(){
 
+        window.scrollTo(0,0);
         if(localStorage.getItem('list')){
           const list = window.localStorage.getItem('list');
           const parsedList = JSON.parse(list);
@@ -164,7 +166,7 @@ export default class Home extends Component {
         return (
             <main className="home">
                 <div className="header__logo-box">
-                    <div className="header__logo"></div>
+                    <Link to="/"><div className="header__logo"></div></Link>
                 </div>    
                 <Nav main={false} />
                 <div className="home--intro">
