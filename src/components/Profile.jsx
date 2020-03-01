@@ -16,6 +16,12 @@ export default class Profile extends Component {
     }
 
     componentDidMount(){
+        document.addEventListener("keyup", e => {
+            if(e.keyCode === 13) {
+                this.addItem();
+                this.input.current.value = '';
+            }
+        })
         if(localStorage.getItem('list')){
             this.setState({
                 list:JSON.parse(localStorage.getItem('list'))
@@ -27,7 +33,6 @@ export default class Profile extends Component {
             })
         }
     }
-
 
     addItem=()=>{
     
@@ -47,6 +52,7 @@ export default class Profile extends Component {
             const list=JSON.parse(localStorage.getItem('list'))
             list.push(Items)
             localStorage.setItem("list",JSON.stringify(list))
+            this.input.current.value = '';
         }
 
         else if(localStorage.getItem('list').length > 6){
@@ -114,7 +120,7 @@ export default class Profile extends Component {
                 </ul>
             </div>
             
-            <Link to="/home"><button onClick={this.test} className="btn-profile__btn-home">VIEW LIVESTYLE</button></Link>
+            <Link to="/home"><button onClick={this.test} className="btn-profile__btn-home">VIEW YOUR LIVESTYLE</button></Link>
             
             
             
