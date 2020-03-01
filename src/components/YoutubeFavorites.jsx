@@ -32,7 +32,8 @@ export default class YoutubeFavorites extends Component {
         let removeIndex = copyFav.map(item=>item.value).indexOf(video);
         copyFav.splice(removeIndex,1)
         await this.setState({
-            favoriteVideos: copyFav
+            favoriteVideos: copyFav,
+            favoriteVideos2: copyFav
         })
         localStorage.setItem("favoriteVideos",JSON.stringify(this.state.favoriteVideos))
     }

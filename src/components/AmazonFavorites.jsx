@@ -35,7 +35,8 @@ export default class AmazonFavorites extends Component {
         let removeIndex = copyFav.map(eachItem=>eachItem.value.image).indexOf(itemImg);
         copyFav.splice(removeIndex,1)
         await this.setState({
-            favoriteItems: copyFav
+            favoriteItems: copyFav,
+            favoriteItems2: copyFav
         })
         localStorage.setItem("favoriteItems",JSON.stringify(this.state.favoriteItems))
     }
