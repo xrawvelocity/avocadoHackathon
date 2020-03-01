@@ -1,0 +1,101 @@
+.youtube-fav {
+    background-color: rgba(34, 34, 34, 0.9);
+
+    &__logo {
+
+        background-image: url(./logo/sanspicTextNoBG.svg);
+        //background-image: url(./logo/liveStyleLogoText.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 12rem;
+        width: 12rem;
+
+        &-box {
+            position: relative;
+        padding-top: 4rem;
+        padding-left: 6rem;
+        }
+    }
+    &--main {
+        padding-top: 20rem;
+        height: 100%;
+        
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    &--intro {
+
+        &__quote {
+            margin-top: 5rem;
+            height: 70vh;            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    &--quote {
+        display: block;
+        font-size: 6rem;
+        font-weight: 400;
+        letter-spacing: 2rem;
+        padding-left: 1.2rem;
+        color: $color-white;
+        text-transform: uppercase;
+        backface-visibility: hidden;
+        opacity: 0;
+        margin-bottom: 14rem;
+
+        animation: fadeIn 2s cubic-bezier(0.165, 0.84, 0.44, 1);
+        animation-fill-mode: forwards; 
+        
+        @include respond(phone){
+            letter-spacing: 1rem;
+            font-size: 5rem;
+            width: 93%;
+        }
+    }
+    
+    &--img {
+        height: 60px;
+        width: auto;
+        margin: -4rem 0 4rem 0;
+    }
+
+    &--grid {
+        margin: 10rem 2rem 20rem;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(550px, 1fr));
+    }
+
+    &--video {
+        width: 550px;
+        height: 340.625px;
+        margin: 5rem auto;
+    }
+
+    &--search {
+        border: none;
+        padding: 1rem 2rem;
+        font-size: 2rem;
+        margin: 10rem auto 0;
+    }
+}
+
+@media only screen and (max-width: 37.5em){ //600px
+	.youtube-fav--video {
+        height: 180px;
+        width: 300px;
+    }
+    .youtube-fav--grid {
+        margin: 5rem 2px;
+        width: auto;
+    }
+    
+}

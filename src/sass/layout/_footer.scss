@@ -16,7 +16,7 @@
         margin-bottom: -3rem;
 
         & > * {
-            padding: 2rem 1rem 0;
+            padding: 2rem 2rem 0;
 
         }
         
@@ -31,9 +31,9 @@
         }
 
         &__linkedin {
-            color: #23f;
+            color: #0072b1;
             &:hover{
-                color:#15f;
+                color:#0086ce;
             }
             & .fab {
                 font-size: 3rem;
@@ -80,20 +80,10 @@
     }
 
     &__link {
-        &:link,
-        &:visited {
-            color: $color-gray-light-1;
-            text-decoration: none;
-            text-transform: uppercase;
-            display: inline-block;
-        }
-
-        &:hover,
-        &:active {
-            color: $color-primary-1;
-            text-shadow: 0rem .5rem .4rem $color-black;
-            transform: translateY(-.2rem);
-        }
+        color: $color-gray-light-1;
+        text-decoration: none;
+        text-transform: uppercase;
+        display: inline-block;
     }
 
     &__copyright {

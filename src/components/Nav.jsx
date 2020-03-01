@@ -21,9 +21,10 @@ export default class Nav extends Component {
 
             <nav className="navigation__nav">
                 <ul className="navigation__list">
-                    <li onClick={this.hideNav} className="navigation__item"><Link to="/home" className="navigation__link">Home</Link></li>
-                    <li onClick={this.hideNav} className="navigation__item"><Link to="/profile" className="navigation__link">Profile</Link></li>
-                    <li onClick={this.hideNav} className="navigation__item"><Link to="/favorites" className="navigation__link">Favorites</Link></li>
+                    <li onClick={this.hideNav} className="navigation__item"><Link to="/home" className="navigation__link">View your LiveStyle</Link></li>
+                    <li onClick={this.hideNav} className="navigation__item"><Link to="/profile" className="navigation__link">Edit your LiveStyle</Link></li>
+                    <li onClick={this.hideNav} className="navigation__item"><Link to="/amazon-favorites" className="navigation__link">Amazon Favorites</Link></li>
+                    <li onClick={this.hideNav} className="navigation__item"><Link to="/youtube-favorites" className="navigation__link">Youtube Favorites</Link></li>
                     
                 </ul>
             </nav>
@@ -41,9 +42,11 @@ export default class Nav extends Component {
 
             <nav className="navigation__nav">
                 <ul className="navigation__list">
-                    <li onClick={this.hideNav} className="navigation__item"><Link to="/home" className="navigation__link">Home</Link></li>
-                    <li onClick={this.hideNav} className="navigation__item"><Link to="/profile" className="navigation__link">Profile</Link></li>
-                    <li onClick={this.hideNav} className="navigation__item"><Link to="/favorites" className="navigation__link">Favorites</Link></li>
+                    
+                    <li onClick={this.hideNav} className="navigation__item"><Link to="/home" className="navigation__link">View your LiveStyle</Link></li>
+                    <li onClick={this.hideNav} className="navigation__item"><Link to="/profile" className="navigation__link">Edit your LiveStyle</Link></li>
+                    <li onClick={this.hideNav} className="navigation__item"><Link to="/amazon-favorites" className="navigation__link">Amazon Favorites</Link></li>
+                    <li onClick={this.hideNav} className="navigation__item"><Link to="/youtube-favorites" className="navigation__link">Youtube Favorites</Link></li>
                     
                 </ul>
             </nav>

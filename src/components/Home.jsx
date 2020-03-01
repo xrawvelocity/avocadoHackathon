@@ -12,6 +12,7 @@ import axios from 'axios';
 let key = 'AIzaSyCL9rLbM01CmVdUgYZWFYUIqcYUsso7MDQ';
 let key2 = 'AIzaSyCRlttHdu2haccytjzgvKVCkNIXc_PWR5A';
 let key3 = 'AIzaSyCzEMTvE1OqDWQA3vkvsUev4WO9nQDMh6g';
+
 export default class Home extends Component {
 
     state = {
@@ -52,9 +53,10 @@ export default class Home extends Component {
             
             console.log(r)
 
-            //let num = Math.random() * r.data.amazonList.length;
-            for(let i=4; i<9;i++){
-                // console.log(r.data.amazonList[i])
+            let num = Math.floor(Math.random() * r.data.amazonList.length);
+            console.log(num)
+            for(let i=(num+4); i<(num+9);i++){
+                console.log(r.data.amazonList[i])
                 if(r.data.amazonList[i]){
                     await this.state.amazonItems.push(r.data.amazonList[i])
                 }
@@ -72,10 +74,11 @@ export default class Home extends Component {
         
     }
 
-    addToFavoriteVideos = (video) => {
+    addToFavoriteVideos = (video,title) => {
         const Items={
             id:uuid.v4(),
             value:video,
+            title: title
         };
 
         if(localStorage.getItem('favoriteVideos')==null){
@@ -94,7 +97,7 @@ export default class Home extends Component {
     addToFavoriteItems = (item) => {
         const Items={
             id:uuid.v4(),
-            value:item,
+            value:item
         };
 
         if(localStorage.getItem('favoriteItems')==null){
@@ -115,6 +118,7 @@ export default class Home extends Component {
         console.log('show videos')
         return this.state.links.map(eachLink=> {
             return eachLink.items.map(eachVideo => {
+                
                 return (
                     <div key={uuid.v4()} className="tile">
                     
@@ -123,7 +127,7 @@ export default class Home extends Component {
                             <iframe width="100%" height="100%" title='test' src={`https://www.youtube.com/embed/${eachVideo.id.videoId}`} frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
 
                             
-                            <button onClick={() => this.addToFavoriteVideos(eachVideo.id.videoId)} className="tile--yt__fav-btn">Add to Favorites <i className="fas fa-check tile--yt__fav-btn__success"></i>
+                            <button onClick={() => this.addToFavoriteVideos(eachVideo.id.videoId, eachVideo.snippet.title)} className="tile--yt__fav-btn">Add to Favorites <i className="fas fa-check tile--yt__fav-btn__success"></i>
                             </button>
                             
                             
@@ -147,48 +151,24 @@ export default class Home extends Component {
             
         }) 
     }
-    
-
-    // showCategories = () => {
-    //     const list = window.localStorage.getItem('list');
-    //     const parsedList = JSON.parse(list);
-    //     return parsedList.map(item => {
-    //         return item.value + " "
-    //     })
-    // }
 
     showLoading = () => {
         return <div className="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
     }
 
-    /////////////////////////////////////////////////////////////////////
-
-    // UNPLASH API JUST IN CASE
-
-    /////////////////////////////////////////////////////////////////////
-
-    // onSearchSubmit = async () => {
-    //     const response = await axios.get("https://api.unsplash.com/search/photos", {
-    //         params: { query: "water" },
-    //         headers: {
-    //         Authorization: "Client-ID gKLGEEGnAX143NdSwLJF-O-1eCRn_9D2Dr_GA0wpSu8"
-    //         }
-    //     });
-    //     console.log(response);
-    //     this.setState({ images: response.data.results });
-    //     console.log(this.state.images)
-    // };
-
-
     
-    ///////////////////////////////////////////////////////////////////
+    
+    /////////////////////////////////////////////////////////////
 
     render() {
         return (
             <main className="home">
+                <div className="header__logo-box">
+                    <div className="header__logo"></div>
+                </div>    
                 <Nav main={false} />
                 <div className="home--intro">
-                    <BGvid />
+                    <BGvid fav={true}/>
                     <section className="home--intro__quote">
                         <h1 className="heading-primary--quote">Live Life Your Way.</h1>
                     </section>

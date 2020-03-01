@@ -17,7 +17,7 @@ export default class Footer extends Component {
                 
                 <p className="footer__copyright">
 
-                    &copy; {currentYear} Built by <a href="https://github.com/xrawvelocity" className="footer__link">Victor Fernandez</a>
+                    &copy; {currentYear} Built by <span  className="footer__link">Victor Fernandez</span>
                 </p>
                 
             </div>
