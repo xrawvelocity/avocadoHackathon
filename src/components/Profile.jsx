@@ -110,10 +110,10 @@ export default class Profile extends Component {
                 ))}
                 </ul>
             </div>
-            <div>
+            
             <Link to="/home"><button onClick={this.test} className="btn-profile__btn-home">VIEW LIVESTYLE</button></Link>
             
-            </div>
+            
             
         </div>
         )

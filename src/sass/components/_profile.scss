@@ -141,41 +141,45 @@
 
 @media only screen and (max-width: 37.5em){ //600px
     .profile {
-        overflow: hidden;
-    }
-    .profile--form__input {
-      width: 30rem;
+        overflow-x: hidden;
+        
+        &--form__input {
+            width: 30rem;
+        }
+            
+        &--form__button {
+            margin: 40px 0;
+            width: 50%;
+        }
+            
+        &--form {
+            top: 47%;
+        }
+            
+        &--list__ul {
+            width: 20rem;
+            height: auto;
+        }
+            
+        &--list {
+            top: 67%;
+        }
+            
+        &--button {
+            margin: 85px 0 40px 0;
+            padding: .5rem;
+            font-size: 1.8rem;
+            width: 40%;
+        }
+            
+        &--heading__text {
+            top: 24%;
+            width: 100%;
+        }
+        
     }
     
-    .profile--form__button {
-      margin: 40px 0;
-      width: 50%;
-    }
     
-    .profile--form {
-      top: 47%;
-    }
-    
-    .profile--list__ul {
-      width: 20rem;
-      height: auto;
-    }
-    
-    .profile--list {
-      top: 67%;
-    }
-    
-    .profile--button {
-      margin: 85px 0 40px 0;
-      padding: .5rem;
-      font-size: 1.8rem;
-      width: 40%;
-    }
-    
-    .profile--heading__text {
-      top: 24%;
-      width: 100%;
-    }
   }
   
   

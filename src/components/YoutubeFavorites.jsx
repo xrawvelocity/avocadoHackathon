@@ -62,7 +62,7 @@ export default class YoutubeFavorites extends Component {
 
     handleChange = (e) => {
         let videoList = [...this.state.favoriteVideos2]
-        console.log(videoList)
+        
         let filteredVideo = videoList.filter(eachVideo=>{
         return eachVideo.title.toLowerCase().includes(e.target.value.toLowerCase())      
         })

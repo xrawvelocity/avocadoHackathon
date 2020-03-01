@@ -9,8 +9,8 @@ export default class Footer extends Component {
 
                 <img className="footer__logo" src="./images/sanspicTextNoBG.svg" alt="Logo"/>
                 <div className="footer--link">
-                    <a className="footer--link__github" href="https://github.com/xrawvelocity" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
-                    <a className="footer--link__linkedin" href="https://www.linkedin.com/in/victor--fernandez" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+                    <a className="footer--link__github" href="https://github.com/xrawvelocity" target="_blank" rel="noopener noreferrer"><i className="fab fa-github"></i></a>
+                    <a className="footer--link__linkedin" href="https://www.linkedin.com/in/victor--fernandez" target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin"></i></a>
                 </div>
             </div>
             <div className="row">

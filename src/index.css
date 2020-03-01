@@ -441,7 +441,7 @@ body {
 @media only screen and (max-width: 37.5em) {
   .btn-profile__btn-home {
     position: relative;
-    top: 1250%;
+    top: 860%;
     left: 0; } }
 
 .card {
@@ -944,27 +944,27 @@ body {
 
 @media only screen and (max-width: 37.5em) {
   .profile {
-    overflow: hidden; }
-  .profile--form__input {
-    width: 30rem; }
-  .profile--form__button {
-    margin: 40px 0;
-    width: 50%; }
-  .profile--form {
-    top: 47%; }
-  .profile--list__ul {
-    width: 20rem;
-    height: auto; }
-  .profile--list {
-    top: 67%; }
-  .profile--button {
-    margin: 85px 0 40px 0;
-    padding: .5rem;
-    font-size: 1.8rem;
-    width: 40%; }
-  .profile--heading__text {
-    top: 24%;
-    width: 100%; } }
+    overflow-x: hidden; }
+    .profile--form__input {
+      width: 30rem; }
+    .profile--form__button {
+      margin: 40px 0;
+      width: 50%; }
+    .profile--form {
+      top: 47%; }
+    .profile--list__ul {
+      width: 20rem;
+      height: auto; }
+    .profile--list {
+      top: 67%; }
+    .profile--button {
+      margin: 85px 0 40px 0;
+      padding: .5rem;
+      font-size: 1.8rem;
+      width: 40%; }
+    .profile--heading__text {
+      top: 24%;
+      width: 100%; } }
 
 .amazon-item {
   display: flex;
@@ -1490,7 +1490,11 @@ body {
     width: 300px; }
   .youtube-fav--grid {
     margin: 5rem 2px;
-    width: auto; } }
+    width: auto; }
+  .youtube-fav--img {
+    height: 40px; }
+  .youtube-fav {
+    overflow-x: hidden; } }
 
 .amazon-fav {
   background-color: rgba(34, 34, 34, 0.9); }
@@ -1725,7 +1729,7 @@ body {
   display: none; }
 
 .navigation__button {
-  background-color: #FDAF37;
+  background-color: #eee;
   height: 7rem;
   width: 7rem;
   position: fixed;
@@ -1735,7 +1739,10 @@ body {
   z-index: 2000;
   box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
   text-align: center;
-  cursor: pointer; }
+  cursor: pointer;
+  transition: all .2s ease-in-out; }
+  .navigation__button:hover {
+    background-color: #FDAF37; }
   @media only screen and (max-width: 56.25em) {
     .navigation__button {
       top: 4rem;
@@ -1748,7 +1755,7 @@ body {
   position: fixed;
   top: 6.5rem;
   right: 6.5rem;
-  background-image: radial-gradient(#101B3B, #0a1022);
+  background-image: radial-gradient(#282828, #333);
   z-index: 1000;
   transition: all 0.7s cubic-bezier(0.86, 0, 0.07, 1); }
   @media only screen and (max-width: 56.25em) {
@@ -1783,7 +1790,7 @@ body {
   font-size: 3rem;
   padding: 1rem 2rem;
   font-weight: 300;
-  color: #FDAF37;
+  color: #eee;
   text-decoration: none;
   text-transform: uppercase;
   background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #FDAF37 50%);
@@ -1795,7 +1802,7 @@ body {
 
 .navigation__link:hover, .navigation__link:active {
   background-position: 100%;
-  color: #101B3B;
+  color: #050608;
   transform: translateX(0.7rem); }
   @media only screen and (max-width: 37.5em) {
     .navigation__link:hover, .navigation__link:active {
@@ -1843,6 +1850,10 @@ body {
 .navigation__checkbox:checked + .navigation__button .navigation__icon:after {
   transform: rotate(-135deg);
   top: 0; }
+
+@media only screen and (max-width: 37.5em) {
+  .navigation__link, .navigation__link:link, .navigation__link:visited {
+    font-size: 2.3rem; } }
 
 .section-about {
   background-color: #f7f7f7;
