@@ -11,9 +11,9 @@ export default class Home extends Component {
         console.log(avocadoHealth)
         return avocadoHealth.map(each=>{
             return (
-                <div>
-                <h1>{each.Benefit}</h1>
-                <p>{each.Description}</p>
+                <div class="benefit">
+                <h1 class="benefit-heading">{each.Benefit}</h1>
+                <p class="benefit-description">{each.Description}</p>
                 </div>
             )
         })
@@ -32,7 +32,7 @@ export default class Home extends Component {
 
     render() {
         return (
-            <main className="home">
+            <main id="home" className="home">
                 
                 <Nav main={false} />
                 <div className="home--intro">
@@ -51,18 +51,18 @@ export default class Home extends Component {
                 
                 <div className="home--main">
                     <section id="benefits" className="home--main__benefits">
-                        <h1>Benefits</h1>
+                        <h1 class="benefit-title">Benefits</h1>
                         {this.showBenefits()}
                         
                         
                     </section>
-                    <section id="recipes" className="home--main__recipes">
-                        <h1>DIY Avocado</h1>
-                        {this.showRecipes()}
+                    <section id="hacks" className="home--main__hacks">
+                        <h1 class="benefit-title">DIY Avocado Hacks</h1>
+
 
                     </section>
                     <section id="celebrities" className="home--main__celebrities">
-                        
+                    <h1 class="benefit-title">Celebrities</h1>
 
 
                     </section>

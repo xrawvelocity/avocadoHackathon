@@ -43,8 +43,8 @@ body {
   overflow-x: hidden; }
 
 ::selection {
-  background-color: #FDAF37;
-  color: #101B3B; }
+  background-color: #558303;
+  color: #333; }
 
 @keyframes moveInLeft {
   0% {
@@ -125,8 +125,8 @@ body {
   display: block;
   width: 30px;
   height: 30px;
-  border-bottom: 5px solid #FDAF37;
-  border-right: 5px solid #FDAF37;
+  border-bottom: 5px solid #558303;
+  border-right: 5px solid #558303;
   transform: rotate(45deg);
   margin: -10px;
   animation: animateScroll 2s infinite; }
@@ -306,7 +306,7 @@ body {
   font-size: 3.5rem;
   text-transform: uppercase;
   font-weight: 700;
-  background-image: linear-gradient(to right, #FDAF37, #F79348);
+  background-image: linear-gradient(to right, #558303, #F79348);
   display: inline-block;
   background-clip: text;
   -webkit-background-clip: text;
@@ -416,14 +416,14 @@ body {
     font-size: 1.8rem;
     transition: all .2s;
     position: relative;
-    color: #101B3B; }
+    color: #333; }
   .btn-home__btn:hover, .btn-home__btn-add:hover, .btn-home__btn-home:hover,
   .btn-profile__btn:hover,
   .btn-profile__btn-add:hover,
   .btn-profile__btn-home:hover {
     transform: translateY(-0.3rem);
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
-    background-color: #FDAF37; }
+    background-color: #558303; }
   .btn-home__btn:active, .btn-home__btn-add:active, .btn-home__btn-home:active,
   .btn-profile__btn:active,
   .btn-profile__btn-add:active,
@@ -759,7 +759,7 @@ body {
     .form__input:focus {
       outline: none;
       box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
-      border-bottom: 3px solid #FDAF37; }
+      border-bottom: 3px solid #558303; }
     .form__input:focus:invalid {
       border-bottom: 3px solid #ff7730; }
     .form__input::-webkit-input-placeholder {
@@ -828,7 +828,7 @@ body {
   .home--main__benefits {
     padding-top: 10rem;
     height: 100%;
-    background-color: #6C8F32;
+    background-color: #eee;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -844,8 +844,7 @@ body {
   .home--main__hacks {
     padding-top: 15rem;
     height: 120vh;
-    background-color: #282828;
-    background-image: linear-gradient(to bottom, #282828 0%, rgba(204, 204, 204, 0.75) 20%, #eeeeee 100%); }
+    background-color: #fff; }
     .home--main__hacks--img {
       height: 100px;
       width: auto;
@@ -857,12 +856,45 @@ body {
     .home--main__hacks--link {
       height: 240px;
       width: 100%; }
+  .home--main__celebrities {
+    padding-top: 15rem;
+    height: 120vh;
+    background-color: #ddd; }
+    .home--main__celebrities--img {
+      height: 100px;
+      width: auto;
+      margin: 5rem 0; }
+    .home--main__celebrities--carousel {
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+    .home--main__celebrities--link {
+      height: 240px;
+      width: 100%; }
 
 @media only screen and (max-width: 37.5em) {
   .home--main__youtube--img {
     height: 40px; }
   .home--main__amazon--img {
     height: 70px; } }
+
+.benefit {
+  width: 50%;
+  padding: 3rem; }
+  .benefit-title {
+    color: #1e3809;
+    text-transform: uppercase;
+    font-size: 6rem;
+    padding: 0 0 5rem;
+    letter-spacing: 2rem; }
+  .benefit-heading {
+    color: #356211;
+    padding-bottom: 2rem;
+    font-size: 2.5rem; }
+  .benefit-description {
+    color: #222;
+    padding-bottom: 2rem;
+    font-size: 1.5rem; }
 
 .profile {
   display: flex;
@@ -1090,7 +1122,7 @@ body {
   overflow-x: scroll;
   overflow-y: hidden;
   width: 100%;
-  scrollbar-color: #FDAF37 rgba(5, 6, 8, 0.3); }
+  scrollbar-color: #558303 rgba(5, 6, 8, 0.3); }
 
 .row__inner {
   transition: 450ms transform;
@@ -1130,7 +1162,7 @@ body {
     background: linear-gradient(to bottom, #f7f8fa, #e7e9ec);
     box-shadow: 0 1px 0 rgba(255, 255, 255, 0.6) inset; }
   .tile--yt__fav-btn:hover {
-    background: linear-gradient(to bottom, #FDAF37, #FDAF37);
+    background: linear-gradient(to bottom, #558303, #558303);
     border: none;
     cursor: pointer;
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
@@ -1184,7 +1216,7 @@ body {
   display: flex;
   height: 650px;
   width: 100%;
-  scrollbar-color: #FDAF37 rgba(5, 6, 8, 0.3); }
+  scrollbar-color: #558303 rgba(5, 6, 8, 0.3); }
 
 .row__inner-amazon {
   transition: 450ms transform;
@@ -1743,7 +1775,7 @@ body {
   display: none; }
 
 .navigation__button {
-  background-color: #eee;
+  background-color: #ccc;
   height: 7rem;
   width: 7rem;
   position: fixed;
@@ -1756,7 +1788,7 @@ body {
   cursor: pointer;
   transition: all .2s ease-in-out; }
   .navigation__button:hover {
-    background-color: #FDAF37; }
+    background-color: #558303; }
   @media only screen and (max-width: 56.25em) {
     .navigation__button {
       top: 4rem;
@@ -1807,12 +1839,12 @@ body {
   color: #eee;
   text-decoration: none;
   text-transform: uppercase;
-  background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #FDAF37 50%);
+  background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #558303 50%);
   background-size: 235%;
   transition: all .4s; }
   @media only screen and (max-width: 37.5em) {
     .navigation__link:link, .navigation__link:visited {
-      background-image: linear-gradient(120deg, transparent 0%, transparent 60%, #FDAF37 60%); } }
+      background-image: linear-gradient(120deg, transparent 0%, transparent 60%, #558303 60%); } }
 
 .navigation__link:hover, .navigation__link:active {
   background-position: 100%;
