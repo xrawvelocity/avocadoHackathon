@@ -11,8 +11,10 @@
             width: 100%;
             height: 100vh;            
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
+
         }
 
     }
@@ -43,9 +45,9 @@
 
         }
     
-        &__hacks {
+        &__nutrition {
             padding-top: 15rem;
-            height: 120vh;
+            height: 100%;
             background-color: #fff;
 
             &--img {
@@ -64,6 +66,7 @@
                 height: 240px;
                 width: 100%;                
             }
+            
         }
         &__celebrities {
             padding-top: 15rem;
@@ -91,6 +94,33 @@
     }
 }
 
+.nutrition {
+
+    padding: 0 0 5rem;
+
+    &-title {
+        color: #1e3809;
+        text-transform: uppercase;
+        font-size: 3.5rem;
+        padding: 0 0 5rem;
+        letter-spacing: 2rem;
+    }
+
+    &-heading {
+        color: #356211;
+        padding-bottom: 2rem;
+        font-size: 2.5rem;
+    }
+
+    &-description {
+        color: #222;
+        padding-bottom: 2rem;
+        font-size: 2rem;
+        width: 100%;
+    }
+}
+
+
 @media only screen and (max-width: 75em){ //1200px
 	
 }
@@ -109,14 +139,29 @@
     }
 }
 
+.home--intro__quote {
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("./images/landingavocado.jpg");
+            background-size: cover;
+            background-position: center;
+            width: 100%;
+            height: 100vh;            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+}
+
+.tomato_man {
+    height: 200px;
+    width: auto;
+}
 .benefit {
-    width: 50%;
+    width: 100%;
     padding: 3rem;
 
     &-title {
         color: #1e3809;
         text-transform: uppercase;
-        font-size: 6rem;
+        font-size: 2.5rem;
         padding: 0 0 5rem;
         letter-spacing: 2rem;
     }
@@ -131,5 +176,6 @@
         color: #222;
         padding-bottom: 2rem;
         font-size: 1.5rem;
+        width: 100%;
     }
 }

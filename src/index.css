@@ -823,6 +823,7 @@ body {
     width: 100%;
     height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center; }
   .home--main__benefits {
@@ -841,19 +842,19 @@ body {
       display: flex;
       justify-content: center;
       align-items: center; }
-  .home--main__hacks {
+  .home--main__nutrition {
     padding-top: 15rem;
-    height: 120vh;
+    height: 100%;
     background-color: #fff; }
-    .home--main__hacks--img {
+    .home--main__nutrition--img {
       height: 100px;
       width: auto;
       margin: 5rem 0; }
-    .home--main__hacks--carousel {
+    .home--main__nutrition--carousel {
       display: flex;
       justify-content: center;
       align-items: center; }
-    .home--main__hacks--link {
+    .home--main__nutrition--link {
       height: 240px;
       width: 100%; }
   .home--main__celebrities {
@@ -872,19 +873,51 @@ body {
       height: 240px;
       width: 100%; }
 
+.nutrition {
+  padding: 0 0 5rem; }
+  .nutrition-title {
+    color: #1e3809;
+    text-transform: uppercase;
+    font-size: 3.5rem;
+    padding: 0 0 5rem;
+    letter-spacing: 2rem; }
+  .nutrition-heading {
+    color: #356211;
+    padding-bottom: 2rem;
+    font-size: 2.5rem; }
+  .nutrition-description {
+    color: #222;
+    padding-bottom: 2rem;
+    font-size: 2rem;
+    width: 100%; }
+
 @media only screen and (max-width: 37.5em) {
   .home--main__youtube--img {
     height: 40px; }
   .home--main__amazon--img {
     height: 70px; } }
 
+.home--intro__quote {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./images/landingavocado.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.tomato_man {
+  height: 200px;
+  width: auto; }
+
 .benefit {
-  width: 50%;
+  width: 100%;
   padding: 3rem; }
   .benefit-title {
     color: #1e3809;
     text-transform: uppercase;
-    font-size: 6rem;
+    font-size: 2.5rem;
     padding: 0 0 5rem;
     letter-spacing: 2rem; }
   .benefit-heading {
@@ -894,7 +927,8 @@ body {
   .benefit-description {
     color: #222;
     padding-bottom: 2rem;
-    font-size: 1.5rem; }
+    font-size: 1.5rem;
+    width: 100%; }
 
 .profile {
   display: flex;

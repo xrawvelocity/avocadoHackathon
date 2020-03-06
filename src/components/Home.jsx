@@ -19,17 +19,22 @@ export default class Home extends Component {
             )
         })
     }
-    showRecipes = () => {
+    showNutrition = () => {
         console.log(avocados)
         return avocados.map(each=>{
             return (
-                <div>
-                <h1>{each.Benefit}</h1>
-                <p>{each.Description}</p>
+                <div class="nutrition">
+                <h1 class="nutrition-heading">{each.Description}</h1>
+                <p class="nutrition-description">Calories: {each.calories}</p>
+                <p class="nutrition-description">Carbs: {each.carbohydrate}</p>
+                <p class="nutrition-description">Fat: {each.fat}</p>
+                <p class="nutrition-description">Protein: {each.protein}</p>
                 </div>
             )
         })
     }
+
+    
 
     render() {
         return (
@@ -37,9 +42,10 @@ export default class Home extends Component {
                 
                 <Nav main={false} />
                 <div className="home--intro">
-                    <div class="home--into__image"></div>
+                
                     <section className="home--intro__quote">
-                        <h1 className="heading-primary--quote">Avocado</h1>
+                    <h1 className="heading-primary--quote">Avocado</h1>
+
                     </section>
                     <a href="#benefits">
                     <div className="arrow">
@@ -51,9 +57,15 @@ export default class Home extends Component {
                 </div>
                 
                 <div className="home--main">
-                    <section id="benefits" className="home--main__benefits">
+                <section id="benefits" className="home--main__benefits">
                         <h1 class="benefit-title">Benefits</h1>
                         {this.showBenefits()}
+                        
+                        
+                    </section>
+                    <section id="nutrition" className="home--main__nutrition">
+                        <h1 class="nutrition-title">Nutrition Facts</h1>
+                        {this.showNutrition()}
                         
                         
                     </section>

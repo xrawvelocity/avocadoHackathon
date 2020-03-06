@@ -23,7 +23,7 @@ export default class Nav extends Component {
                 <ul className="navigation__list">
                     <li onClick={this.hideNav} className="navigation__item"><a href="#home" className="navigation__link">Home</a></li>
                     <li onClick={this.hideNav} className="navigation__item"><a href="#benefits" className="navigation__link">Benefits</a></li>
-                    <li onClick={this.hideNav} className="navigation__item"><a href="#hacks" className="navigation__link">Hacks</a></li>
+                    <li onClick={this.hideNav} className="navigation__item"><a href="#nutrition" className="navigation__link">Nutrition Facts</a></li>
                     <li onClick={this.hideNav} className="navigation__item"><a href="#celebrities" className="navigation__link">Celebrities</a></li>
                 </ul>
             </nav>
@@ -43,7 +43,7 @@ export default class Nav extends Component {
                 <ul className="navigation__list">
                     <li onClick={this.hideNav} className="navigation__item"><a href="#home" className="navigation__link">Home</a></li>
                     <li onClick={this.hideNav} className="navigation__item"><a href="#benefits" className="navigation__link">Benefits</a></li>
-                    <li onClick={this.hideNav} className="navigation__item"><a href="#hacks" className="navigation__link">Hacks</a></li>
+                    <li onClick={this.hideNav} className="navigation__item"><a href="#nutrition" className="navigation__link">Nutrition Facts</a></li>
                     <li onClick={this.hideNav} className="navigation__item"><a href="#celebrities" className="navigation__link">Celebrities</a></li>
                 </ul>
             </nav>
