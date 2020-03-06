@@ -2,11 +2,10 @@ import React, { Component } from 'react';
 import { Switch, Route } from 'react-router-dom'
 import './App.css';
 import Header from './components/Header';
-import Profile from './components/Profile';
 import Home from './components/Home';
-import Favorites from './components/Favorites';
-import YoutubeFavorites from './components/YoutubeFavorites';
-
+import Benefits from './components/Benefits'
+import Celebrities from './components/Celebrities'
+import Products from './components/Products'
 
 
 class App extends Component {
