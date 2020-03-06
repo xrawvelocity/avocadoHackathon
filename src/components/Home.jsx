@@ -73,7 +73,7 @@ export default class Home extends Component {
                     <section id="celebrities" className="home--main__celebrities">
                     <h1 class="benefit-title">Influencers</h1>
                     <Celebrities/>
-
+                    <p class="random benefit-description">Influencers love avocadoes! Many of them may be rich, but you can see that they love the beautifying affects of avocadoes just as much as everyone else. Miley and Kim K both vouch the holistic benefits of these fruits and use them as masks habitually. Avocadoes are superfoods for your face too! Mash and apply to your face to get glowy skin on the cheap.</p>
                     </section>
                 </div>
                 <Footer />            
