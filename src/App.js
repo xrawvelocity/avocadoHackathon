@@ -25,8 +25,6 @@ class App extends Component {
 
       </Switch>
       
-      <Celebrities/>
-      
     </div>
   );
 }

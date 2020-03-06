@@ -4,6 +4,7 @@ import Footer from './Footer';
 import Nav from './Nav';
 import avocados from '../avocado.json'
 import avocadoHealth from '../avocado_health_benefits'
+import Celebrities from './Celebrities';
 
 export default class Home extends Component {
 
@@ -56,14 +57,10 @@ export default class Home extends Component {
                         
                         
                     </section>
-                    <section id="hacks" className="home--main__hacks">
-                        <h1 class="benefit-title">DIY Avocado Hacks</h1>
-
-
-                    </section>
+                   
                     <section id="celebrities" className="home--main__celebrities">
-                    <h1 class="benefit-title">Celebrities</h1>
-
+                    <h1 class="benefit-title">Influencers</h1>
+                    <Celebrities/>
 
                     </section>
                 </div>
