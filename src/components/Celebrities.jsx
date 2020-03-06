@@ -5,9 +5,9 @@ export default class Celebrities extends Component {
         return (
             <div className="home--intro__celebrities">
                 
-                <img src="./images/Kimkardashianavocado.jpg" alt="Logo" className="tomato_man" style={{ width: '300px'}}/>
-                <img src="/images/mileyavocado.jpg" alt="Logo" className="tomato_man" style={{ width: '300px'}}/>
-                <img src="images/oprahavocado.jpg" alt="Logo" className="tomato_man" style={{ width: '300px'}}/>
+                <img src="./images/Kimkardashianavocado.jpg" alt="Logo" className="tomato_man"/>
+                <img src="/images/mileyavocado.jpg" alt="Logo" className="tomato_man"/>
+                <img src="images/oprahavocado.jpg" alt="Logo" className="tomato_man"/>
             </div>
         )
     }

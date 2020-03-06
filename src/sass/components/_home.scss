@@ -120,6 +120,12 @@
     }
 }
 
+.tomato_man {
+    height: auto;
+    width: 500px;
+    padding: 2rem;
+}
+
 
 @media only screen and (max-width: 75em){ //1200px
 	
@@ -151,8 +157,9 @@
 }
 
 .tomato_man {
-    height: 200px;
-    width: auto;
+    height: auto;
+    width: 300px;
+    padding: 2rem;
 }
 .benefit {
     width: 100%;
