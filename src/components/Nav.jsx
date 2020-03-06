@@ -24,7 +24,7 @@ export default class Nav extends Component {
                     <li onClick={this.hideNav} className="navigation__item"><a href="#home" className="navigation__link">Home</a></li>
                     <li onClick={this.hideNav} className="navigation__item"><a href="#benefits" className="navigation__link">Benefits</a></li>
                     <li onClick={this.hideNav} className="navigation__item"><a href="#nutrition" className="navigation__link">Nutrition Facts</a></li>
-                    <li onClick={this.hideNav} className="navigation__item"><a href="#celebrities" className="navigation__link">Celebrities</a></li>
+                    <li onClick={this.hideNav} className="navigation__item"><a href="#celebrities" className="navigation__link">Influencers</a></li>
                 </ul>
             </nav>
             </div>
@@ -44,7 +44,7 @@ export default class Nav extends Component {
                     <li onClick={this.hideNav} className="navigation__item"><a href="#home" className="navigation__link">Home</a></li>
                     <li onClick={this.hideNav} className="navigation__item"><a href="#benefits" className="navigation__link">Benefits</a></li>
                     <li onClick={this.hideNav} className="navigation__item"><a href="#nutrition" className="navigation__link">Nutrition Facts</a></li>
-                    <li onClick={this.hideNav} className="navigation__item"><a href="#celebrities" className="navigation__link">Celebrities</a></li>
+                    <li onClick={this.hideNav} className="navigation__item"><a href="#celebrities" className="navigation__link">Influencers</a></li>
                 </ul>
             </nav>
             </div>
