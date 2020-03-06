@@ -21,11 +21,10 @@ export default class Nav extends Component {
 
             <nav className="navigation__nav">
                 <ul className="navigation__list">
-                    <li onClick={this.hideNav} className="navigation__item"><Link to="/home" className="navigation__link">View your LiveStyle</Link></li>
-                    <li onClick={this.hideNav} className="navigation__item"><Link to="/profile" className="navigation__link">Edit your LiveStyle</Link></li>
-                    <li onClick={this.hideNav} className="navigation__item"><Link to="/amazon-favorites" className="navigation__link">Amazon Favorites</Link></li>
-                    <li onClick={this.hideNav} className="navigation__item"><Link to="/youtube-favorites" className="navigation__link">Youtube Favorites</Link></li>
-                    
+                    <li onClick={this.hideNav} className="navigation__item"><a href="#home" className="navigation__link">Home</a></li>
+                    <li onClick={this.hideNav} className="navigation__item"><a href="#benefits" className="navigation__link">Benefits</a></li>
+                    <li onClick={this.hideNav} className="navigation__item"><a href="#hacks" className="navigation__link">Hacks</a></li>
+                    <li onClick={this.hideNav} className="navigation__item"><a href="#celebrities" className="navigation__link">Celebrities</a></li>
                 </ul>
             </nav>
             </div>
@@ -42,12 +41,10 @@ export default class Nav extends Component {
 
             <nav className="navigation__nav">
                 <ul className="navigation__list">
-                    
-                    <li onClick={this.hideNav} className="navigation__item"><Link to="/home" className="navigation__link">View your LiveStyle</Link></li>
-                    <li onClick={this.hideNav} className="navigation__item"><Link to="/profile" className="navigation__link">Edit your LiveStyle</Link></li>
-                    <li onClick={this.hideNav} className="navigation__item"><Link to="/amazon-favorites" className="navigation__link">Amazon Favorites</Link></li>
-                    <li onClick={this.hideNav} className="navigation__item"><Link to="/youtube-favorites" className="navigation__link">Youtube Favorites</Link></li>
-                    
+                    <li onClick={this.hideNav} className="navigation__item"><a href="#home" className="navigation__link">Home</a></li>
+                    <li onClick={this.hideNav} className="navigation__item"><a href="#benefits" className="navigation__link">Benefits</a></li>
+                    <li onClick={this.hideNav} className="navigation__item"><a href="#hacks" className="navigation__link">Hacks</a></li>
+                    <li onClick={this.hideNav} className="navigation__item"><a href="#celebrities" className="navigation__link">Celebrities</a></li>
                 </ul>
             </nav>
             </div>

@@ -1,6 +1,5 @@
 /* eslint-disable jsx-a11y/no-distracting-elements */
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import Footer from './Footer';
 import Nav from './Nav';
 import avocados from '../avocado.json'
@@ -10,19 +9,36 @@ export default class Home extends Component {
 
     showBenefits = () => {
         console.log(avocadoHealth)
+        return avocadoHealth.map(each=>{
+            return (
+                <div>
+                <h1>{each.Benefit}</h1>
+                <p>{each.Description}</p>
+                </div>
+            )
+        })
+    }
+    showRecipes = () => {
+        console.log(avocados)
+        return avocados.map(each=>{
+            return (
+                <div>
+                <h1>{each.Benefit}</h1>
+                <p>{each.Description}</p>
+                </div>
+            )
+        })
     }
 
     render() {
         return (
             <main className="home">
-                <div className="header__logo-box">
-                    <Link to="/"><div className="header__logo"></div></Link>
-                </div>    
+                
                 <Nav main={false} />
                 <div className="home--intro">
-                    
+                    <div class="home--into__image"></div>
                     <section className="home--intro__quote">
-                        <h1 className="heading-primary--quote">Live Life Your Way.</h1>
+                        <h1 className="heading-primary--quote">Avocado</h1>
                     </section>
                     <a href="#benefits">
                     <div className="arrow">
@@ -41,8 +57,8 @@ export default class Home extends Component {
                         
                     </section>
                     <section id="recipes" className="home--main__recipes">
-                        
-
+                        <h1>DIY Avocado</h1>
+                        {this.showRecipes()}
 
                     </section>
                     <section id="celebrities" className="home--main__celebrities">
