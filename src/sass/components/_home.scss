@@ -70,7 +70,7 @@
         }
         &__celebrities {
             padding-top: 15rem;
-            height: 120vh;
+            height: 100%;
             background-color: #ddd;
 
             &--img {
@@ -97,6 +97,7 @@
 .nutrition {
 
     padding: 0 0 5rem;
+    
 
     &-title {
         color: #1e3809;

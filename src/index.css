@@ -859,7 +859,7 @@ body {
       width: 100%; }
   .home--main__celebrities {
     padding-top: 15rem;
-    height: 120vh;
+    height: 100%;
     background-color: #ddd; }
     .home--main__celebrities--img {
       height: 100px;
